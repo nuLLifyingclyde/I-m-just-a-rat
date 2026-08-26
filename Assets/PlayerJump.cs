@@ -26,14 +26,14 @@ public class PlayerJump : MonoBehaviour
     {
         GroundedPlayer = ratController.isGrounded;
 
-        if (GroundedPlayer && playerVelocity.y < 0)
+        if (GroundedPlayer)
         {
             playerVelocity.y = -2f;
         }
 
         if (Input.GetMouseButtonDown(0) && GroundedPlayer)
         {
-            playerVelocity.y += Mathf.Sqrt(jumpForce * -3.0f * ValueofGravity);
+            playerVelocity.y = Mathf.Sqrt(jumpForce * -2.0f * ValueofGravity);
 
         }
 

@@ -5,18 +5,27 @@ using UnityEngine;
 
 public class CarSummonScript : MonoBehaviour
 {
-
-    public GameObject CarPrefab;
+   
+    
+    public GameObject[] CarPrefab;
+    
    
     public float spawnDelay;
     
-   public float nextSpawnTime;
+    private float nextSpawnTime;
+
+    int randomInt;
+   
+
+
 
     // Start is called before the first frame update
     void Start()
     {
 
         nextSpawnTime = Time.time + spawnDelay;
+
+      
 
     }
 
@@ -25,11 +34,18 @@ public class CarSummonScript : MonoBehaviour
     {
         if (Time.time >= nextSpawnTime)
         {
-            Instantiate(CarPrefab);
-           
+
+            randomInt = Random.Range(0,3);
+
+
+
+            Instantiate(CarPrefab[randomInt], transform.position, transform.rotation );
+
+            nextSpawnTime = Time.time + spawnDelay;
+
         }
 
-        nextSpawnTime = Time.time + spawnDelay;
+       
     }
 
   

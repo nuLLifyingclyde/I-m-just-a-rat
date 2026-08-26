@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CarACTUALMovement : MonoBehaviour
 {
@@ -23,5 +24,24 @@ public class CarACTUALMovement : MonoBehaviour
 
     }
 
-    
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Rat"))
+        {
+            Destroy(gameObject);
+
+            SceneManager.LoadScene("Trash alleyway");
+
+
+            Debug.Log("Player is Dead");
+        }
+
+     
+
+
+        
+
+        
+    }
+
 }

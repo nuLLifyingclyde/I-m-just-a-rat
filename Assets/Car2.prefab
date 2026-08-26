@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 6420471698355664524}
   - component: {fileID: 7973500590926761845}
   - component: {fileID: 5429830637933144451}
+  - component: {fileID: 4190890853985834177}
   m_Layer: 0
   m_Name: Car2
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,9 +29,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 491086620831245365}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.99997556, z: -0, w: 0.006996039}
-  m_LocalPosition: {x: -227.4, y: 11.4, z: 478.6}
-  m_LocalScale: {x: 29.773134, y: 29.773134, z: 68.790825}
+  m_LocalRotation: {x: 0, y: 0.00043954636, z: 0, w: 0.99999994}
+  m_LocalPosition: {x: 1288.5, y: 15.3, z: 451.9}
+  m_LocalScale: {x: 8.720551, y: 8.720551, z: 20.148832}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -115,9 +116,36 @@ MonoBehaviour:
   m_GameObject: {fileID: 491086620831245365}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fed93ab67fbb4f54fbc31098d0252f93, type: 3}
+  m_Script: {fileID: 11500000, guid: 3ec516cbded04d54eb8ca839451d38af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   carspeed: 2
   RatTag: Rat
-  rat: {fileID: 0}
+  rat: {fileID: 6046311050776200434, guid: 32e5c96a89d196c4f8a25ea28288ae7a, type: 3}
+--- !u!54 &4190890853985834177
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491086620831245365}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
