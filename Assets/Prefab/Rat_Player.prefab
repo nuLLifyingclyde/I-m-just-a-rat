@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 7057847184453973736}
   m_Layer: 0
   m_Name: Rat_Player
-  m_TagString: Untagged
+  m_TagString: Rat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -123,7 +123,7 @@ Transform:
   m_GameObject: {fileID: 2426597156914886610}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -43.448, y: 0.718, z: -34.99422}
+  m_LocalPosition: {x: -166.7, y: -11.295, z: -34.99422}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -172,9 +172,9 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 1
+  m_Height: 2
   m_Radius: 1.2
-  m_SlopeLimit: 75
+  m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
@@ -228,7 +228,7 @@ MonoBehaviour:
   groundedStick: -2
   lockToLane: 1
   enableShakeBoost: 1
-  shakeSpeedMultiplier: 5
+  shakeSpeedMultiplier: 5.5
   shakesToTrigger: 3
   shakeWindow: 0.4
   minShakePixelsPerSecond: 500
@@ -275,7 +275,6 @@ GameObject:
   - component: {fileID: 3881243420784488806}
   - component: {fileID: 1550837409180681269}
   - component: {fileID: 8936872151773240952}
-  - component: {fileID: 7009938369829230206}
   m_Layer: 0
   m_Name: Rat_Sprite
   m_TagString: Untagged
@@ -351,25 +350,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &7009938369829230206
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9153458447659271265}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}

@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "I-m-just-a-rat-GIT.sln"
+    "dotnet.defaultSolution": "I-m-just-a-rat.sln"
 }
