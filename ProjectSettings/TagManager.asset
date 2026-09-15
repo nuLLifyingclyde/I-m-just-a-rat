@@ -8,6 +8,9 @@ TagManager:
   - Rat
   - Ladder
   - Food
+  - Door
+  - trashbag
+  - Shit Triggerer
   layers:
   - Default
   - TransparentFX

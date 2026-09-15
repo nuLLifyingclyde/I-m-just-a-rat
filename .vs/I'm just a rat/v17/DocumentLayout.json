@@ -3,20 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|c:\\users\\tweak\\my project (7)\\i\u0027m just a rat\\assets\\ratfood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\assets\\ratfood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|solutionrelative:assets\\ratfood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|c:\\users\\tweak\\my project (7)\\i\u0027m just a rat\\assets\\script\\climbactivator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\assets\\foodmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|solutionrelative:assets\\foodmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|c:\\users\\tweak\\my project (7)\\i\u0027m just a rat\\assets\\trashtrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|solutionrelative:assets\\trashtrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\assets\\doortrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|solutionrelative:assets\\doortrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\assets\\dooropen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|solutionrelative:assets\\dooropen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\assets\\script\\climb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\climb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\assets\\script\\climbactivator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\climbactivator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\assets\\script\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\assets\\script\\climb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\climb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\assets\\foodscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -29,10 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\assets\\script\\caractualmovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\caractualmovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\assets\\foodmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|solutionrelative:assets\\foodmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\PlayerJump.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -62,11 +74,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "Climb.cs",
               "DocumentMoniker": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\Climb.cs",
               "RelativeDocumentMoniker": "Assets\\Climb.cs",
@@ -79,20 +91,56 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "TrashTrigger.cs",
+              "DocumentMoniker": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\TrashTrigger.cs",
+              "RelativeDocumentMoniker": "Assets\\TrashTrigger.cs",
+              "ToolTip": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\TrashTrigger.cs",
+              "RelativeToolTip": "Assets\\TrashTrigger.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-15T12:12:28.195Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DoorTrigger.cs",
+              "DocumentMoniker": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\DoorTrigger.cs",
+              "RelativeDocumentMoniker": "Assets\\DoorTrigger.cs",
+              "ToolTip": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\DoorTrigger.cs",
+              "RelativeToolTip": "Assets\\DoorTrigger.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-15T01:37:29.513Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DoorOpen.cs",
+              "DocumentMoniker": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\DoorOpen.cs",
+              "RelativeDocumentMoniker": "Assets\\DoorOpen.cs",
+              "ToolTip": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\DoorOpen.cs",
+              "RelativeToolTip": "Assets\\DoorOpen.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-15T00:16:07.402Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "ClimbActivator.cs",
               "DocumentMoniker": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\Script\\ClimbActivator.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\ClimbActivator.cs",
               "ToolTip": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\Script\\ClimbActivator.cs",
               "RelativeToolTip": "Assets\\Script\\ClimbActivator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T06:37:37.03Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-14T06:37:37.03Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "PlayerController.cs",
               "DocumentMoniker": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\Script\\PlayerController.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\PlayerController.cs",
@@ -100,8 +148,7 @@
               "RelativeToolTip": "Assets\\Script\\PlayerController.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T05:40:02.615Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-14T05:40:02.615Z"
             },
             {
               "$type": "Document",
@@ -111,26 +158,27 @@
               "RelativeDocumentMoniker": "Assets\\RatFood.cs",
               "ToolTip": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\RatFood.cs",
               "RelativeToolTip": "Assets\\RatFood.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwCUAAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBwAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-12T11:50:51.887Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "FoodManager.cs",
               "DocumentMoniker": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\FoodManager.cs",
               "RelativeDocumentMoniker": "Assets\\FoodManager.cs",
               "ToolTip": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\FoodManager.cs",
               "RelativeToolTip": "Assets\\FoodManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-12T11:49:07.889Z"
+              "WhenOpened": "2026-09-12T11:49:07.889Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "CarACTUALMovement.cs",
               "DocumentMoniker": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\Script\\CarACTUALMovement.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\CarACTUALMovement.cs",
@@ -142,7 +190,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "PlayerJump.cs",
               "DocumentMoniker": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\Script\\PlayerJump.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\PlayerJump.cs",
@@ -150,25 +198,23 @@
               "RelativeToolTip": "Assets\\Script\\PlayerJump.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-12T11:13:57.485Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-12T11:13:57.485Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Climb.cs",
               "DocumentMoniker": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\Script\\Climb.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Climb.cs",
               "ToolTip": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\Script\\Climb.cs",
               "RelativeToolTip": "Assets\\Script\\Climb.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwBMAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-12T11:13:46.791Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-12T11:13:46.791Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "FoodScript.cs",
               "DocumentMoniker": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\FoodScript.cs",
               "RelativeDocumentMoniker": "Assets\\FoodScript.cs",
@@ -176,12 +222,11 @@
               "RelativeToolTip": "Assets\\FoodScript.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-12T11:05:23.93Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-12T11:05:23.93Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "PlayerJump.cs",
               "DocumentMoniker": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\PlayerJump.cs",
               "RelativeDocumentMoniker": "Assets\\PlayerJump.cs",
@@ -192,7 +237,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "DamageTaken.cs",
               "DocumentMoniker": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\DamageTaken.cs",
               "RelativeDocumentMoniker": "Assets\\DamageTaken.cs",
@@ -203,7 +248,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "CarACTUALMovement.cs",
               "DocumentMoniker": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\CarACTUALMovement.cs",
               "RelativeDocumentMoniker": "Assets\\CarACTUALMovement.cs",
@@ -214,7 +259,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "Car Summon Script.cs",
               "DocumentMoniker": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\Car Summon Script.cs",
               "RelativeDocumentMoniker": "Assets\\Car Summon Script.cs",
