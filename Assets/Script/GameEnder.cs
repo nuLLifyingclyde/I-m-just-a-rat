@@ -14,11 +14,13 @@ public class GameEnder : MonoBehaviour
     // Update is called once per frame
     void OnTriggerEnter(Collider other)
     {
-        if (fm.foodcount < 20)
+        if (fm.foodcount < 15)
         {
             SceneManager.LoadScene("Trash alleyway");
 
             Debug.Log("Player is Dead");
         }
+
+       
     }
 }

@@ -1,5 +1,6 @@
 using UnityEngine;
 
+
 public class RatFood : MonoBehaviour
 {
     public FoodManager fm;
@@ -18,7 +19,7 @@ public class RatFood : MonoBehaviour
     public float currentspeed;
     public float currentaccel;
     public float shakeCurrentSpeed;
-
+   
     // Update is called once per frame
     /*void OnTriggerEnter(Collider other)
     {
@@ -53,6 +54,7 @@ public class RatFood : MonoBehaviour
         currentspeed = mdc.moveSpeed;
         currentaccel = mdc.acceleration;
         shakeCurrentSpeed = mdc.shakeSpeedMultiplier;
+
     }
     void Update() //I changed food count to food manager
     {
