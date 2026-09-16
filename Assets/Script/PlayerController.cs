@@ -24,6 +24,13 @@ public class MouseDirectionController : MonoBehaviour
     public float shakeSpeedMultiplier = 1.8f;
     public int shakesToTrigger = 3;
     public float shakeWindow = 0.4f, minShakePixelsPerSecond = 500f, boostDuration = 2f, boostBlendSpeed = 6f;
+    
+    
+    //Camera changing
+    [Header("Turn Lock")]
+    public bool movementLocked = false;
+
+
 
     private CharacterController controller;
     private Transform cachedTransform;
@@ -57,7 +64,9 @@ public class MouseDirectionController : MonoBehaviour
 
         // Without a usable projection there is no way to tell which side the cursor is on, so coast.
         bool canReadCursor = UpdateScreenProjection();
-        int input = canReadCursor ? ReadMouseDirection(cursor) : 0;
+        //int input = canReadCursor ? ReadMouseDirection(cursor) : 0;
+
+        int input = (!movementLocked && canReadCursor) ? ReadMouseDirection(cursor) : 0; //lock character movement while turning
 
         //Flip the character
         if (input != 0)
@@ -69,9 +78,12 @@ public class MouseDirectionController : MonoBehaviour
 
         UpdateShakeBoost(input, cursor, canReadCursor, dt);
 
-        // Two rates, so coasting to a stop feels different from driving into a direction.
+        /*// Two rates, so coasting to a stop feels different from driving into a direction.
         currentSpeed = Mathf.MoveTowards(currentSpeed, input * moveSpeed * SpeedMultiplier * ShakeBoost,
-            (input == 0 ? deceleration : acceleration) * dt);
+        (input == 0 ? deceleration : acceleration) * dt);*/
+
+        float targetSpeed = movementLocked ? 0f : input * moveSpeed * SpeedMultiplier * ShakeBoost;
+        currentSpeed = Mathf.MoveTowards(currentSpeed, targetSpeed, (input == 0 ? deceleration : acceleration) * dt);
 
         // Clamped while grounded; letting gravity accumulate would launch us off the first ledge.
         verticalVelocity = controller.isGrounded && verticalVelocity < 0f ? groundedStick : verticalVelocity + gravity * dt;
@@ -79,6 +91,30 @@ public class MouseDirectionController : MonoBehaviour
         controller.Move((axis * currentSpeed + Vector3.up * verticalVelocity) * dt);
         if (lockToLane) ClampToLane();
     }
+
+
+    //Camera changing
+    public void SetMoveAxis(Vector3 newAxis)
+    {
+        if (newAxis.sqrMagnitude < 0.0001f) return;
+        
+        axis = newAxis.normalized;
+        moveAxis = axis;
+        
+        laneOrigin = cachedTransform.position;
+        
+        hasCursorSample = false;
+        lastStrokeSign = 0f;
+        shakeCount = 0;
+    }
+    public void StopMovement()
+    {
+        currentSpeed = 0f;
+        hasCursorSample = false;
+        lastStrokeSign = 0f;
+        shakeCount = 0;
+    }
+
 
     // Caches the character's screen position and the screen direction of the move axis. False when
     // there is no camera, or the axis points straight at/away from it and projects to nothing.

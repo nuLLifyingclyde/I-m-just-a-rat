@@ -11,21 +11,21 @@ public class Climb : MonoBehaviour
     private float vertical; 
     [SerializeField] private Rigidbody rb; 
     [SerializeField] private string LadderTag = "Ladder"; 
+    [SerializeField] private MouseDirectionController movementController;
     
-    // Start is called before the first frame update 
-    void Start()
-    {
-        
-    }
-    // Update is called once per frame 
-    
-    void Update() 
+    private void Update() 
     { 
         vertical = Input.GetAxisRaw("Vertical"); 
-        if (isLadder && Input.GetMouseButtonDown(1) && Mathf.Abs(vertical) > 0f) 
+        if (isLadder && Input.GetMouseButtonDown(2)) //&& Mathf.Abs(vertical) > 0f 
         { 
             isClimbing = true; 
+            movementController.movementLocked = true;
         } 
+
+        if (!isLadder) //isClimbing && 
+        {
+            isClimbing = false;
+        }
     } 
     
     private void FixedUpdate() 
@@ -47,7 +47,7 @@ public class Climb : MonoBehaviour
     { 
         if (collision.CompareTag("Ladder")) 
         { 
-            isClimbing = true; 
+            //isClimbing = true; 
             isLadder = true; 
         } 
     } 
@@ -58,6 +58,8 @@ public class Climb : MonoBehaviour
         { 
             isClimbing = false; 
             isLadder = false; 
+
+            movementController.movementLocked = false;
         } 
     } 
 }
