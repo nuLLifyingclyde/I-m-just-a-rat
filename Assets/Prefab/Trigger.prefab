@@ -421,8 +421,8 @@ MonoBehaviour:
   - {fileID: 1160664159367835011, guid: c86cec34dc0654f99bb9bdf95403dca7, type: 3}
   - {fileID: 92031741395039087, guid: 242ea2d0b4255480ab63c2adb74bcd33, type: 3}
   - {fileID: 2719227072498787595, guid: 7d3c432864e1840f0a6792cd1c2cc98f, type: 3}
-  minSpawnDelay: 1.2
-  maxSpawnDelay: 3
+  minSpawnDelay: 2.2
+  maxSpawnDelay: 4
   carPool: {fileID: 4400423652978932361}
 --- !u!1 &3607648063949179521
 GameObject:
@@ -1584,8 +1584,8 @@ MonoBehaviour:
   - {fileID: 2719227072498787595, guid: 7d3c432864e1840f0a6792cd1c2cc98f, type: 3}
   - {fileID: 1160664159367835011, guid: c86cec34dc0654f99bb9bdf95403dca7, type: 3}
   - {fileID: 92031741395039087, guid: 242ea2d0b4255480ab63c2adb74bcd33, type: 3}
-  minSpawnDelay: 0.5
-  maxSpawnDelay: 3
+  minSpawnDelay: 2
+  maxSpawnDelay: 5
   carPool: {fileID: 4400423652978932361}
 --- !u!1 &7982222715641102285
 GameObject:
@@ -1820,6 +1820,6 @@ MonoBehaviour:
   - {fileID: 92031741395039087, guid: 242ea2d0b4255480ab63c2adb74bcd33, type: 3}
   - {fileID: 2719227072498787595, guid: 7d3c432864e1840f0a6792cd1c2cc98f, type: 3}
   - {fileID: 1160664159367835011, guid: c86cec34dc0654f99bb9bdf95403dca7, type: 3}
-  minSpawnDelay: 0.5
+  minSpawnDelay: 2
   maxSpawnDelay: 4
   carPool: {fileID: 4400423652978932361}

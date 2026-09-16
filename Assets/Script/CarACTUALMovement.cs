@@ -34,6 +34,7 @@ public class CarACTUALMovement : MonoBehaviour
     void Update()
     {
         transform.Translate(0, 0, carspeed);
+        //transform.Translate(0, 0, carspeed * Time.deltaTime);
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -49,7 +50,7 @@ public class CarACTUALMovement : MonoBehaviour
 
     IEnumerator DeactivateCar()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(15f);
         
         if (carPool != null)
         {

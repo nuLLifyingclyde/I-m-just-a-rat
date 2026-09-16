@@ -343,14 +343,14 @@ RectTransform:
   m_GameObject: {fileID: 1038362092559075322}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -31.2}
-  m_LocalScale: {x: 0.6, y: 0.59342, z: 0.59342}
+  m_LocalScale: {x: 0.31893602, y: 0.31543836, z: 0.31543836}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5854600991963218536}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -566.09, y: -507.31}
+  m_AnchoredPosition: {x: -566.47, y: -512.83}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &1824070971992812261
@@ -418,7 +418,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Right Click to take a dump here
+  m_text: 'Press Right Click to take a dump
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -526,7 +528,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -949.22003, y: -501.54}
+  m_AnchoredPosition: {x: -949.22003, y: -505.69}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &390678671152926184

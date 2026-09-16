@@ -29,12 +29,15 @@ public class CarSummonScript : MonoBehaviour
         {
             randomInt = Random.Range(0,3);
             //Instantiate(CarPrefab[randomInt], transform.position, transform.rotation);
-            carPool.SpawnObject(CarPrefab[randomInt], transform.position, transform.rotation);
             
             if (carPool != null)
             {
-                nextSpawnTime = Time.time + Random.Range(minSpawnDelay, maxSpawnDelay);
+                carPool.SpawnObject(CarPrefab[randomInt], transform.position, transform.rotation);
             }
+            
+            nextSpawnTime = Time.time + Random.Range(minSpawnDelay, maxSpawnDelay);
         }
     }
 }
+
+
