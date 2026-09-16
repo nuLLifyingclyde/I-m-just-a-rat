@@ -26,8 +26,6 @@ public class FoodManager : MonoBehaviour
         foodcount += amount;
         UpdateFoodUI();
 
-
-
         Debug.Log("Food: " + foodcount);
     }
 
@@ -36,14 +34,11 @@ public class FoodManager : MonoBehaviour
         foodcount -= amount;
         UpdateFoodUI();
 
-
-        
-
         Debug.Log("Food: " + foodcount);
     }
 
     public void UpdateFoodUI()
     {
-        FoodText.text = foodcount.ToString() + "Foodcount";
+        FoodText.text = foodcount.ToString() + " Food collected";
     }
 }

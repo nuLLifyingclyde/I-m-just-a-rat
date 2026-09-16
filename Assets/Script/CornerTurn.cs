@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class CornerTurn : MonoBehaviour
 {
+    [SerializeField] private float forwardRotation = -90f;
+    [SerializeField] private float reverseRotation = 0f;
+
     private void OnTriggerEnter(Collider other)
     {
         Corner playerTurn = other.GetComponent<Corner>();
@@ -9,6 +12,21 @@ public class CornerTurn : MonoBehaviour
         if (playerTurn == null)
         return;
 
-        playerTurn.StartCornerTurn();
+        float currentY = other.transform.eulerAngles.y;
+
+        float forwardDifference =
+        Mathf.Abs(Mathf.DeltaAngle(currentY, forwardRotation));
+
+        float reverseDifference =
+        Mathf.Abs(Mathf.DeltaAngle(currentY, reverseRotation));
+
+        if (forwardDifference < reverseDifference)
+        {
+            playerTurn.StartCornerTurn(reverseRotation);
+        }
+        else
+        {
+            playerTurn.StartCornerTurn(forwardRotation);
+        }
     }
 }

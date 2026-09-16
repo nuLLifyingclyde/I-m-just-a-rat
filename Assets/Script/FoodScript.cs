@@ -26,7 +26,6 @@ public class FoodScript : MonoBehaviour
             if (fm != null)
             {
                 fm.AddFood(foodAmount);
-               
             }
 
             Destroy(gameObject);

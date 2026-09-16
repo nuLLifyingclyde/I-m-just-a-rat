@@ -11,7 +11,7 @@ public class ShitMechanic : MonoBehaviour
     {
         if (isInRange && Input.GetMouseButtonDown(1))
         {
-            fm.foodcount -= decreaseamount;
+            fm.RemoveFood(decreaseamount);
             Debug.Log("Taking a shit");
         }
     }
