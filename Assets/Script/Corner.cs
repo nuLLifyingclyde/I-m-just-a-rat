@@ -8,16 +8,22 @@ public class Corner : MonoBehaviour
     [SerializeField] private float targetYRotation = 0f;
 
     private bool isTurning = false;
+    private Ragdoll ragdoll;
 
     private void Awake()
     {
         if (movementController == null)
         movementController = GetComponent<MouseDirectionController>();
+
+        ragdoll = GetComponent<Ragdoll>();
     }
 
     public void StartCornerTurn(float targetRotation)
     {
         if (isTurning) return;
+
+        if (ragdoll != null && ragdoll.IsRagdolling) return;
+
         StartCoroutine(TurnPlayer(targetRotation));
     }
 

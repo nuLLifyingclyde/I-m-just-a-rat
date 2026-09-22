@@ -96,6 +96,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8111564639687379865}
   - component: {fileID: 910005174235431987}
+  - component: {fileID: 943595721722291504}
   - component: {fileID: 1326452960057537383}
   - component: {fileID: 8985268971848836799}
   - component: {fileID: 5211442685326763108}
@@ -150,6 +151,33 @@ CapsuleCollider:
   m_Height: 2.4000008
   m_Direction: 1
   m_Center: {x: 0.20000005, y: 0.5, z: -0.00000035762787}
+--- !u!114 &943595721722291504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5362641675055506912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be6165660b06504e8699edfbfb8135f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  launchForce: 20
+  launchLift: 8
+  carSpeedInfluence: 0.5
+  tumbleVisual: {fileID: 0}
+  tumbleDegreesPerSecond: 360
+  bounciness: 0.55
+  minBounceSpeed: 2.5
+  bounceGrace: 0.08
+  ragdollDrag: 0.15
+  settleSpeed: 1.2
+  standUpTime: 0.45
+  settleHold: 0.15
+  minRagdollTime: 0.4
+  invulnerabilityTime: 1
+  maxRagdollTime: 5
 --- !u!143 &1326452960057537383
 CharacterController:
   m_ObjectHideFlags: 0
@@ -300,7 +328,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementController: {fileID: 5211442685326763108}
   turnDuration: 0.6
-  turnAmount: -90
+  targetYRotation: 0
 --- !u!1 &8162442633324449026
 GameObject:
   m_ObjectHideFlags: 0

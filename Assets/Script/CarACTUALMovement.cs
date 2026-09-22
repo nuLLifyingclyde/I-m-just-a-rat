@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class CarACTUALMovement : MonoBehaviour
 {
@@ -39,13 +38,23 @@ public class CarACTUALMovement : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Rat"))
+        if (!collision.gameObject.CompareTag(RatTag))
         {
-            //Destroy(gameObject);
-            SceneManager.LoadScene("Trash alleyway");
-
-            Debug.Log("Player is Dead");
+            return;
         }
+
+        // Survivable now: the rat is knocked into a ragdoll and recovers, instead of the hit
+        // reloading the scene.
+        Ragdoll ragdoll = collision.gameObject.GetComponent<Ragdoll>();
+
+        if (ragdoll == null || !ragdoll.CanBeHit)
+        {
+            return;
+        }
+
+        ragdoll.HitByCar(transform.position, carspeed);
+
+        Debug.Log("Player got hit by a car");
     }
 
     IEnumerator DeactivateCar()
