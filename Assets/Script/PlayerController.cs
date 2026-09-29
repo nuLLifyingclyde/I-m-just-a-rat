@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 // Mouse-driven sidescroller movement: the character walks along one world axis towards whichever
 // side of itself the cursor is on, and gets a short speed boost when the cursor is shaken there.
@@ -22,6 +23,7 @@ public class MouseDirectionController : MonoBehaviour
     [Header("Shake Boost")]
     public bool enableShakeBoost = true;
     public float shakeSpeedMultiplier = 1.8f;
+    public bool infiniteboost = false;
     public int shakesToTrigger = 3;
     public float shakeWindow = 0.4f, minShakePixelsPerSecond = 500f, boostDuration = 2f, boostBlendSpeed = 6f;
     
@@ -30,20 +32,31 @@ public class MouseDirectionController : MonoBehaviour
     [Header("Turn Lock")]
     public bool movementLocked = false;
 
+    [Header("Rat Food")]
+    public float foodDecayDelay = 3f;
+    public float foodDecayTimer;
+    public float accumulatedFoodMultiplier = 0f;
+    public float accumulatedFoodDuration = 0f;
 
+    [Header("Boost Bar")]
+    public Image BoostBar;
+    private float displayFilledAmount;
+    private float barFillSpeed = 2f ;
+    public float maxBoostTimer = 1f;
 
     private CharacterController controller;
     private Transform cachedTransform;
     private Vector3 laneOrigin, axis;
     private Vector2 characterScreenPosition, screenAxisDirection;
-    private float currentSpeed, verticalVelocity, lastCursorAxisPosition, lastStrokeSign, lastShakeTime, boostTimer, boostBlend;
+    private float currentSpeed, verticalVelocity, lastCursorAxisPosition, lastStrokeSign, lastShakeTime, boostBlend;
+    public float boostTimer;
     private bool hasCursorSample;
     private int shakeCount;
 
     public float SpeedMultiplier { get; set; } = 1f;
     public float CurrentSpeed => currentSpeed;
     public int MoveDirection => currentSpeed > 0.01f ? 1 : currentSpeed < -0.01f ? -1 : 0;
-    public bool IsBoosting => boostTimer > 0f;
+    public bool IsBoosting => boostTimer > 0f && Input.GetMouseButtonDown(1);
     public float ShakeBoost => Mathf.Lerp(1f, shakeSpeedMultiplier, boostBlend);
 
     private void Awake()
@@ -54,6 +67,8 @@ public class MouseDirectionController : MonoBehaviour
         axis = moveAxis.sqrMagnitude > 0f ? moveAxis.normalized : Vector3.right;
         laneOrigin = cachedTransform.position;
         lastShakeTime = float.NegativeInfinity; // so the first reversal always starts a fresh streak
+        boostTimer = 0f;
+        maxBoostTimer = 1f;
     }
 
     private void Update()
@@ -76,7 +91,32 @@ public class MouseDirectionController : MonoBehaviour
             transform.localScale = scale;
         }
 
-        UpdateShakeBoost(input, cursor, canReadCursor, dt);
+        if (enableShakeBoost && Input.GetMouseButtonDown(1) && infiniteboost)
+        {
+            boostTimer = boostDuration;
+            maxBoostTimer = Mathf.Max(boostTimer, maxBoostTimer);
+            Debug.Log("Boost");
+
+            
+        }
+
+     
+        
+
+        if (boostTimer > 0) boostTimer -= dt;
+        boostBlend = Mathf.MoveTowards(boostBlend, IsBoosting ? 1f : 0f, boostBlendSpeed * dt);
+
+        if (boostTimer > 0f && Input.GetMouseButtonDown(1))
+        {
+            boostTimer -= dt;
+            if (boostTimer <= 0f)
+            {
+                boostTimer = 0f;
+                maxBoostTimer = 1f;
+                Debug.Log("Boost Out");
+            }
+     
+        }
 
         /*// Two rates, so coasting to a stop feels different from driving into a direction.
         currentSpeed = Mathf.MoveTowards(currentSpeed, input * moveSpeed * SpeedMultiplier * ShakeBoost,
@@ -90,8 +130,29 @@ public class MouseDirectionController : MonoBehaviour
 
         controller.Move((axis * currentSpeed + Vector3.up * verticalVelocity) * dt);
         if (lockToLane) ClampToLane();
+
+        if (accumulatedFoodMultiplier > 0f)
+        {
+            foodDecayTimer -= dt;
+            SpeedMultiplier = Mathf.Max(1f, SpeedMultiplier - accumulatedFoodMultiplier);
+            accumulatedFoodMultiplier = 0f;
+            accumulatedFoodDuration = 0f;
+            Debug.Log("No boost cuz no food consistentcy");
+        }
+       
+        float fillTarget = maxBoostTimer > 0f ? Mathf.Clamp01(boostTimer / maxBoostTimer) : 0f;
+        displayFilledAmount = Mathf.MoveTowards(displayFilledAmount, fillTarget, barFillSpeed * dt);
+
+        if (BoostBar != null)
+        {
+           
+                BoostBar.fillAmount = displayFilledAmount;
+        }
+
+      
     }
 
+  
 
     //Camera changing
     public void SetMoveAxis(Vector3 newAxis)
@@ -140,9 +201,21 @@ public class MouseDirectionController : MonoBehaviour
         return distance > deadZonePixels ? 1 : distance < -deadZonePixels ? -1 : 0;
     }
 
+   public void AddFoodBoost(float addDuration, float addMultiplier)
+    {
+        accumulatedFoodDuration += addDuration;
+        accumulatedFoodMultiplier += addMultiplier;
+
+        SpeedMultiplier += addMultiplier;
+        boostTimer += addDuration;
+
+        maxBoostTimer = Mathf.Max(boostTimer / maxBoostTimer);
+        foodDecayTimer = foodDecayDelay;
+    }
+
     // Waggling the cursor along the move axis, on the side the character already heads towards,
     // charges up a short speed boost.
-    private void UpdateShakeBoost(int input, Vector2 cursor, bool canReadCursor, float dt)
+ void UpdateShakeBoost(int input, Vector2 cursor, bool canReadCursor, float dt)
     {
         // Ticked unconditionally so an in-flight boost still fades out if input or the feature drops.
         if (boostTimer > 0f) boostTimer -= dt;
@@ -183,7 +256,9 @@ public class MouseDirectionController : MonoBehaviour
             }
         }
         lastStrokeSign = strokeSign;
+        
     }
+ 
 
     // 3D collisions can nudge the character off the sidescroller plane, so strip any movement that
     // is not along the move axis or straight up.
@@ -195,6 +270,7 @@ public class MouseDirectionController : MonoBehaviour
         // Writing position resyncs the controller with the physics scene, so only when it drifted.
         if (drift.sqrMagnitude > 1e-6f) cachedTransform.position = position - drift;
     }
+   
 
     // Editor-only: keeps the inspector from producing values that break the math.
     private void OnValidate()
@@ -202,7 +278,7 @@ public class MouseDirectionController : MonoBehaviour
         axis = moveAxis.sqrMagnitude > 0f ? moveAxis.normalized : Vector3.right;
         deadZonePixels = Mathf.Max(0f, deadZonePixels);
         shakeSpeedMultiplier = Mathf.Max(1f, shakeSpeedMultiplier);
-        shakesToTrigger = Mathf.Max(1, shakesToTrigger);
+      
         shakeWindow = Mathf.Max(0.01f, shakeWindow);
         minShakePixelsPerSecond = Mathf.Max(0f, minShakePixelsPerSecond);
         boostDuration = Mathf.Max(0f, boostDuration);

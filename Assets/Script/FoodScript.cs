@@ -1,35 +1,54 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class FoodScript : MonoBehaviour
-/*{
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    private void OnTriggerEnter(Collider collision)
-    {
-        if (collision.GetComponent<CharacterController>())
-        {
-            Destroy(gameObject);
-            Debug.Log("Food Collected");
-        }
-    }
-}*/
 
 {
     public int foodAmount = 1;
+    public GameObject gameObject;
+    public MouseDirectionController mdc;
+    public float multiplierboost = 1f ;
+    public float durationBoost = 1f; 
+   
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.GetComponent<CharacterController>())
+        CharacterController charController = collision.GetComponent<CharacterController>();
+        if (charController != null)
         {
-            //food count +1 before disappear
-            FoodManager fm = FindFirstObjectByType<FoodManager>();
-
-            if (fm != null)
+            if (mdc == null)
             {
-                fm.AddFood(foodAmount);
+                mdc = charController.GetComponent<MouseDirectionController>();
+                
             }
 
-            Destroy(gameObject);
-            Debug.Log("Food Collected");
+
+           
+            
+                //food count +1 before disappear
+                FoodManager fm = FindFirstObjectByType<FoodManager>();
+
+                if (fm != null)
+                {
+                    fm.AddFood(foodAmount);
+                }
+
+                if (mdc != null)
+            {
+                mdc.shakeSpeedMultiplier += multiplierboost;
+                mdc.AddFoodBoost(durationBoost, multiplierboost);
+               
+            }
+
+                Destroy(gameObject);
+
+
+
+
+
+
+
+            
         }
     }
 }

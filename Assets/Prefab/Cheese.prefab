@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3378392742294502160}
   m_Layer: 0
   m_Name: Cheese
-  m_TagString: Untagged
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -122,3 +122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foodAmount: 1
+  gameObject: {fileID: 7207367929955653405}
+  mdc: {fileID: 5211442685326763108, guid: 1e1407d52825b4456b0a57fa18d98710, type: 3}
+  multiplierboost: 0.2
+  durationBoost: 1
