@@ -124,5 +124,5 @@ MonoBehaviour:
   foodAmount: 1
   gameObject: {fileID: 7207367929955653405}
   mdc: {fileID: 5211442685326763108, guid: 1e1407d52825b4456b0a57fa18d98710, type: 3}
-  multiplierboost: 0.2
+  multiplierboost: 0.03
   durationBoost: 1

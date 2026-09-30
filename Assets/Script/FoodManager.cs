@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SocialPlatforms.Impl;
 
@@ -7,6 +8,12 @@ public class FoodManager : MonoBehaviour
     public static FoodManager instance;
     public int foodcount;
     public TMP_Text FoodText;
+    public Image Fillbar;
+    public float DisplayBarFillAmount;
+    public float BarFillSpeed = 1f;
+    public int maxfood = 0;
+    public int minfood = 50;
+
 
 
     private void Awake()
@@ -19,6 +26,10 @@ public class FoodManager : MonoBehaviour
     {
         UpdateFoodUI();
         
+    }
+    public void Upate()
+    {
+        Bar();
     }
     public void AddFood(int amount)
     {
@@ -39,6 +50,18 @@ public class FoodManager : MonoBehaviour
 
     public void UpdateFoodUI()
     {
-        FoodText.text = foodcount.ToString() + " Food collected";
+        FoodText.text = foodcount.ToString() ;
+    }
+
+    public void Bar()
+    {
+        float fillTarget = (maxfood > 0f) ? Mathf.Clamp01((float)foodcount/maxfood) : 0f;
+
+        DisplayBarFillAmount = Mathf.MoveTowards(DisplayBarFillAmount, fillTarget, BarFillSpeed * Time.deltaTime);
+
+        if (Fillbar != null)
+        {
+            Fillbar.fillAmount = DisplayBarFillAmount;
+        }
     }
 }

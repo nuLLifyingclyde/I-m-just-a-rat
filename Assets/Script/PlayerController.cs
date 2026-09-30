@@ -37,6 +37,8 @@ public class MouseDirectionController : MonoBehaviour
     public float foodDecayTimer;
     public float accumulatedFoodMultiplier = 0f;
     public float accumulatedFoodDuration = 0f;
+    public FoodScript fs;
+    public FoodManager fm;
 
     [Header("Boost Bar")]
     public Image BoostBar;
@@ -56,7 +58,7 @@ public class MouseDirectionController : MonoBehaviour
     public float SpeedMultiplier { get; set; } = 1f;
     public float CurrentSpeed => currentSpeed;
     public int MoveDirection => currentSpeed > 0.01f ? 1 : currentSpeed < -0.01f ? -1 : 0;
-    public bool IsBoosting => boostTimer > 0f && Input.GetMouseButtonDown(1);
+    public bool IsBoosting => boostTimer > 0f ;
     public float ShakeBoost => Mathf.Lerp(1f, shakeSpeedMultiplier, boostBlend);
 
     private void Awake()
@@ -115,6 +117,9 @@ public class MouseDirectionController : MonoBehaviour
                 maxBoostTimer = 1f;
                 Debug.Log("Boost Out");
             }
+
+           
+            
      
         }
 
@@ -133,12 +138,26 @@ public class MouseDirectionController : MonoBehaviour
 
         if (accumulatedFoodMultiplier > 0f)
         {
-            foodDecayTimer -= dt;
-            SpeedMultiplier = Mathf.Max(1f, SpeedMultiplier - accumulatedFoodMultiplier);
-            accumulatedFoodMultiplier = 0f;
-            accumulatedFoodDuration = 0f;
-            Debug.Log("No boost cuz no food consistentcy");
+
+            if (IsBoosting)
+            {
+                foodDecayTimer = foodDecayDelay;
+            }
+
+            else
+
+                foodDecayTimer -= dt;
+            if (foodDecayTimer <= 0f)
+            {
+
+
+                SpeedMultiplier = Mathf.Max(1f, SpeedMultiplier - accumulatedFoodMultiplier);
+                accumulatedFoodMultiplier = 0f;
+                accumulatedFoodDuration = 0f;
+                Debug.Log("Boost is gone");
+            }
         }
+        
        
         float fillTarget = maxBoostTimer > 0f ? Mathf.Clamp01(boostTimer / maxBoostTimer) : 0f;
         displayFilledAmount = Mathf.MoveTowards(displayFilledAmount, fillTarget, barFillSpeed * dt);
@@ -207,9 +226,18 @@ public class MouseDirectionController : MonoBehaviour
         accumulatedFoodMultiplier += addMultiplier;
 
         SpeedMultiplier += addMultiplier;
-        boostTimer += addDuration;
+        if (boostTimer <= 0)
+        {
+            boostTimer = addDuration;
+        }
+        else
 
-        maxBoostTimer = Mathf.Max(boostTimer / maxBoostTimer);
+        {
+            boostTimer += addDuration;
+        }
+       
+
+        maxBoostTimer = Mathf.Max(boostTimer, maxBoostTimer);
         foodDecayTimer = foodDecayDelay;
     }
 

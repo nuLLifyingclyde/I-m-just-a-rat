@@ -12,7 +12,7 @@ public class GameEnder : MonoBehaviour
             return;
         }
 
-        if (fm.foodcount < 15)
+        if (fm.foodcount < 50)
         {
             Debug.Log("Player is Dead");
             SceneManager.LoadScene("Trash alleyway");
