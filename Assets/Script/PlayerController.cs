@@ -46,6 +46,10 @@ public class MouseDirectionController : MonoBehaviour
     private float barFillSpeed = 2f ;
     public float maxBoostTimer = 1f;
 
+    [Header("Animation")]
+    public Animator ani;
+    private int lastFacingDirection = 1;
+
     private CharacterController controller;
     private Transform cachedTransform;
     private Vector3 laneOrigin, axis;
@@ -73,7 +77,7 @@ public class MouseDirectionController : MonoBehaviour
         maxBoostTimer = 1f;
     }
 
-    private void Update()
+    public void Update()
     {
         // Native property reads, so sample them once and pass them down.
         float dt = Time.deltaTime;
@@ -86,24 +90,37 @@ public class MouseDirectionController : MonoBehaviour
         int input = (!movementLocked && canReadCursor) ? ReadMouseDirection(cursor) : 0; //lock character movement while turning
 
         //Flip the character
+
+        
+        // Flip the character
         if (input != 0)
         {
+            lastFacingDirection = input;
             Vector3 scale = transform.localScale;
-            scale.x = Mathf.Abs(scale.x) * input;
+            scale.x = Mathf.Abs(scale.x) * (lastFacingDirection != 0 ? lastFacingDirection : 1);
             transform.localScale = scale;
         }
 
-        if (enableShakeBoost && Input.GetMouseButtonDown(1) && infiniteboost)
+        // Corrected: check if speed is greater than a tiny threshold
+        if (Mathf.Abs(currentSpeed) > 0.01f)
         {
-            boostTimer = boostDuration;
-            maxBoostTimer = Mathf.Max(boostTimer, maxBoostTimer);
-            Debug.Log("Boost");
-
-            
+            ani.SetBool("isWalking", true);
+        }
+        else
+        {
+            ani.SetBool("isWalking", false);
         }
 
-     
-        
+        if (boostTimer > 0)
+        {
+            ani.SetBool("isBoosting", true);
+        }
+
+        else
+        {
+            ani.SetBool("isBoosting", false);
+        }
+
 
         if (boostTimer > 0) boostTimer -= dt;
         boostBlend = Mathf.MoveTowards(boostBlend, IsBoosting ? 1f : 0f, boostBlendSpeed * dt);
@@ -120,7 +137,6 @@ public class MouseDirectionController : MonoBehaviour
 
            
             
-     
         }
 
         /*// Two rates, so coasting to a stop feels different from driving into a direction.

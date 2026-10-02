@@ -8,8 +8,8 @@ public class FoodScript : MonoBehaviour
     public GameObject gameObject;
     public MouseDirectionController mdc;
     public float multiplierboost = 1f ;
-    public float durationBoost = 1f; 
-   
+    public float durationBoost = 1f;
+    
 
     private void OnTriggerEnter(Collider collision)
     {

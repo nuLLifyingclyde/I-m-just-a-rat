@@ -7,9 +7,12 @@ public class CarACTUALMovement : MonoBehaviour
     public float carspeed = 5f;
     public string RatTag = "Rat";
     public GameObject rat;
+    public FoodManager fm;
+    public float slowspeed = 1f;
 
     public CarPool carPool;
     private Coroutine deactivateCoroutine;
+    public MouseDirectionController mdc;
 
     // Start is called before the first frame update
     void Start()
@@ -52,9 +55,16 @@ public class CarACTUALMovement : MonoBehaviour
             return;
         }
 
+        fm.foodcount -= fm.foodcount;
+        mdc.moveSpeed -= slowspeed;
+
+        Debug.Log("Player gets slowed down");
+
         ragdoll.HitByCar(transform.position, carspeed);
 
         Debug.Log("Player got hit by a car");
+
+
     }
 
     IEnumerator DeactivateCar()

@@ -8,6 +8,7 @@ public class PlayerJump : MonoBehaviour
 {
     [SerializeField] public float jumpForce = 5f;
     [SerializeField] public float ValueofGravity = -25f;
+    public Animator ani;
 
 
     private CharacterController ratController;
@@ -29,11 +30,22 @@ public class PlayerJump : MonoBehaviour
         if (GroundedPlayer)
         {
             playerVelocity.y = -2f;
+            if(ani = null)
+            {
+                ani.SetBool("isJumping", false);
+            }
         }
 
         if (Input.GetMouseButtonDown(0) && GroundedPlayer)
         {
             playerVelocity.y = Mathf.Sqrt(jumpForce * -2.0f * ValueofGravity);
+
+            if (ani != null)
+            {
+                ani.SetBool("isJumping", true);
+
+            }
+           
 
         }
 
@@ -41,7 +53,15 @@ public class PlayerJump : MonoBehaviour
 
         ratController.Move(playerVelocity * Time.deltaTime);
 
+        if (Input.GetMouseButtonDown(0))
+        {
+            ani.SetBool("isJumping",  true);
 
+        }
+        else
+        {
+            ani.SetBool("isJumping", false);
+        }
     }
 }
 
