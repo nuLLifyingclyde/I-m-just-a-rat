@@ -61,35 +61,35 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.36f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\StateGraph.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\SuperState.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\Properties\AssemblyInfo.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\IStateDebugData.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\StateGraphData.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\StateMachine.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\FlowState.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\State.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\StateGraphAsset.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\StateEventHooks.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\IStateTransitionDebugData.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\StateExitReason.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\NesterStateTransition.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\IStateTransition.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\INesterStateTransition.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\FlowStateTransition.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\Framework\Graph\HasStateGraph.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\Units\SetStateGraph.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\AnyState.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\TriggerStateTransition.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\StateUnit.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\OnEnterState.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\NesterState.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\Units\GetStateGraphs.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\StateTransition.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\IState.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\StateGraph.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\SuperState.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\StateMachine.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\StateGraphAsset.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\StateEventHooks.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\IStateTransitionDebugData.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\NesterStateTransition.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\Units\SetStateGraph.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\AnyState.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\StateUnit.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\OnExitState.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\INesterState.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\Units\StateGraphContainerType.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\StateTransition.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\IState.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\StateEnterReason.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\Units\GetStateGraph.cs" />
   </ItemGroup>
@@ -581,6 +581,10 @@
       <HintPath>Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.Collections.LowLevel.ILSupport">
+      <HintPath>Library\PackageCache\com.unity.collections@56bff8827a7e\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>Library\PackageCache\com.unity.ext.nunit@60ef35ffd3cd\net40\unity-custom\nunit.framework.dll</HintPath>
       <Private>False</Private>
@@ -619,6 +623,10 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.TextureAssets">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Mono.Cecil">
+      <HintPath>Library\PackageCache\com.unity.nuget.mono-cecil@d6f9955a5d5f\Mono.Cecil.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="netstandard">
