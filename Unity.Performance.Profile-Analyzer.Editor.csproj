@@ -61,37 +61,37 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.36f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Library\PackageCache\com.unity.performance.profile-analyzer@a68e7bc84997\Editor\Analytics.cs" />
     <Compile Include="Library\PackageCache\com.unity.performance.profile-analyzer@a68e7bc84997\Editor\DepthSliceUI.cs" />
-    <Compile Include="Library\PackageCache\com.unity.performance.profile-analyzer@a68e7bc84997\Editor\MarkerColumnFilter.cs" />
     <Compile Include="Library\PackageCache\com.unity.performance.profile-analyzer@a68e7bc84997\Editor\MarkerData.cs" />
-    <Compile Include="Library\PackageCache\com.unity.performance.profile-analyzer@a68e7bc84997\Editor\BoxAndWhiskerPlot.cs" />
-    <Compile Include="Library\PackageCache\com.unity.performance.profile-analyzer@a68e7bc84997\Editor\ProfileTable.cs" />
     <Compile Include="Library\PackageCache\com.unity.performance.profile-analyzer@a68e7bc84997\Editor\ProgressBarDisplay.cs" />
-    <Compile Include="Library\PackageCache\com.unity.performance.profile-analyzer@a68e7bc84997\Editor\Columns.cs" />
     <Compile Include="Library\PackageCache\com.unity.performance.profile-analyzer@a68e7bc84997\Editor\ProfileAnalysis.cs" />
     <Compile Include="Library\PackageCache\com.unity.performance.profile-analyzer@a68e7bc84997\Editor\Draw2D.cs" />
     <Compile Include="Library\PackageCache\com.unity.performance.profile-analyzer@a68e7bc84997\Editor\FrameTime.cs" />
     <Compile Include="Library\PackageCache\com.unity.performance.profile-analyzer@a68e7bc84997\Editor\ProfilerWindowInterface.cs" />
     <Compile Include="Library\PackageCache\com.unity.performance.profile-analyzer@a68e7bc84997\Editor\TimingOptions.cs" />
+    <Compile Include="Library\PackageCache\com.unity.performance.profile-analyzer@a68e7bc84997\Editor\Units.cs" />
+    <Compile Include="Library\PackageCache\com.unity.performance.profile-analyzer@a68e7bc84997\Editor\ProfileDataView.cs" />
+    <Compile Include="Library\PackageCache\com.unity.performance.profile-analyzer@a68e7bc84997\Editor\ThreadIdentifier.cs" />
+    <Compile Include="Library\PackageCache\com.unity.performance.profile-analyzer@a68e7bc84997\Editor\ComparisonTable.cs" />
+    <Compile Include="Library\PackageCache\com.unity.performance.profile-analyzer@a68e7bc84997\Editor\TopMarkerList.cs" />
+    <Compile Include="Library\PackageCache\com.unity.performance.profile-analyzer@a68e7bc84997\Editor\Analytics.cs" />
+    <Compile Include="Library\PackageCache\com.unity.performance.profile-analyzer@a68e7bc84997\Editor\MarkerColumnFilter.cs" />
+    <Compile Include="Library\PackageCache\com.unity.performance.profile-analyzer@a68e7bc84997\Editor\BoxAndWhiskerPlot.cs" />
+    <Compile Include="Library\PackageCache\com.unity.performance.profile-analyzer@a68e7bc84997\Editor\ProfileTable.cs" />
+    <Compile Include="Library\PackageCache\com.unity.performance.profile-analyzer@a68e7bc84997\Editor\Columns.cs" />
     <Compile Include="Library\PackageCache\com.unity.performance.profile-analyzer@a68e7bc84997\Editor\DepthSliceDropdown.cs" />
     <Compile Include="Library\PackageCache\com.unity.performance.profile-analyzer@a68e7bc84997\Editor\FrameSummary.cs" />
-    <Compile Include="Library\PackageCache\com.unity.performance.profile-analyzer@a68e7bc84997\Editor\Units.cs" />
     <Compile Include="Library\PackageCache\com.unity.performance.profile-analyzer@a68e7bc84997\Editor\ThreadFrameTime.cs" />
     <Compile Include="Library\PackageCache\com.unity.performance.profile-analyzer@a68e7bc84997\Editor\AssemblyInfo.cs" />
     <Compile Include="Library\PackageCache\com.unity.performance.profile-analyzer@a68e7bc84997\Editor\ThreadData.cs" />
     <Compile Include="Library\PackageCache\com.unity.performance.profile-analyzer@a68e7bc84997\Editor\ThreadSelection.cs" />
-    <Compile Include="Library\PackageCache\com.unity.performance.profile-analyzer@a68e7bc84997\Editor\ProfileDataView.cs" />
-    <Compile Include="Library\PackageCache\com.unity.performance.profile-analyzer@a68e7bc84997\Editor\ThreadIdentifier.cs" />
     <Compile Include="Library\PackageCache\com.unity.performance.profile-analyzer@a68e7bc84997\Editor\FrameTimeGraph.cs" />
     <Compile Include="Library\PackageCache\com.unity.performance.profile-analyzer@a68e7bc84997\Editor\ProfileAnalyzerExportWindow.cs" />
     <Compile Include="Library\PackageCache\com.unity.performance.profile-analyzer@a68e7bc84997\Editor\ThreadSelectionWindow.cs" />
     <Compile Include="Library\PackageCache\com.unity.performance.profile-analyzer@a68e7bc84997\Editor\Histogram.cs" />
     <Compile Include="Library\PackageCache\com.unity.performance.profile-analyzer@a68e7bc84997\Editor\ProfileAnalyzer.cs" />
     <Compile Include="Library\PackageCache\com.unity.performance.profile-analyzer@a68e7bc84997\Editor\ProfileData.cs" />
-    <Compile Include="Library\PackageCache\com.unity.performance.profile-analyzer@a68e7bc84997\Editor\ComparisonTable.cs" />
     <Compile Include="Library\PackageCache\com.unity.performance.profile-analyzer@a68e7bc84997\Editor\TopMarkers.cs" />
-    <Compile Include="Library\PackageCache\com.unity.performance.profile-analyzer@a68e7bc84997\Editor\TopMarkerList.cs" />
     <Compile Include="Library\PackageCache\com.unity.performance.profile-analyzer@a68e7bc84997\Editor\ProfileAnalyzerWindow.cs" />
     <Compile Include="Library\PackageCache\com.unity.performance.profile-analyzer@a68e7bc84997\Editor\MarkerPairing.cs" />
   </ItemGroup>
@@ -592,6 +592,10 @@
       <HintPath>Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.Collections.LowLevel.ILSupport">
+      <HintPath>Library\PackageCache\com.unity.collections@56bff8827a7e\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>Library\PackageCache\com.unity.ext.nunit@60ef35ffd3cd\net40\unity-custom\nunit.framework.dll</HintPath>
       <Private>False</Private>
@@ -630,6 +634,10 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.TextureAssets">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Mono.Cecil">
+      <HintPath>Library\PackageCache\com.unity.nuget.mono-cecil@d6f9955a5d5f\Mono.Cecil.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="mscorlib">
