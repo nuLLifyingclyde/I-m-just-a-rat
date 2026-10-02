@@ -11,6 +11,7 @@ TagManager:
   - Door
   - trashbag
   - Shit Triggerer
+  - MobNoGo
   layers:
   - Default
   - TransparentFX
