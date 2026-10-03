@@ -19,9 +19,6 @@ public class FoodScript : MonoBehaviour
             //if there is a character controller
         {
 
-
-
-
             MouseDirectionController mdc = charController.GetComponent<MouseDirectionController>();
             //The movement code is declared it equals to the character controller finding the movement code
                 if (mdc != null)
@@ -39,19 +36,9 @@ public class FoodScript : MonoBehaviour
             if (fm != null)
             {
                 fm.AddFood(foodAmount);
-
             }
-
-
-
+            
             Destroy(gameObject);
-
-
-
-
-
-
-
             
         }
     }

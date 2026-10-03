@@ -6,15 +6,13 @@ using UnityEngine.SocialPlatforms.Impl;
 public class FoodManager : MonoBehaviour
 {
     public static FoodManager instance;
-    public int foodcount;
     public TMP_Text FoodText;
     public Image Fillbar;
     public float DisplayBarFillAmount;
     public float BarFillSpeed = 1f;
+    public int foodcount;
     public int maxfood = 0;
     public int minfood = 50;
-
-
 
     private void Awake()
     {
@@ -25,15 +23,15 @@ public class FoodManager : MonoBehaviour
     public void Start()
     {
         UpdateFoodUI();
-        
     }
-    public void Upate()
+
+    public void Update()
     {
         Bar();
     }
+
     public void AddFood(int amount)
     {
-
         foodcount += amount;
         UpdateFoodUI();
 
@@ -42,15 +40,15 @@ public class FoodManager : MonoBehaviour
 
     public void RemoveFood(int amount)
     {
-        foodcount -= amount;
+        foodcount = Mathf.Max(0, foodcount - amount);
         UpdateFoodUI();
-
+        
         Debug.Log("Food: " + foodcount);
     }
 
     public void UpdateFoodUI()
     {
-        FoodText.text = foodcount.ToString() ;
+        FoodText.text = foodcount.ToString();
     }
 
     public void Bar()

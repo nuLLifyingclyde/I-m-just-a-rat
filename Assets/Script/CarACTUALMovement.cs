@@ -55,7 +55,7 @@ public class CarACTUALMovement : MonoBehaviour
             return;
         }
 
-        fm.foodcount -= fm.foodcount;
+        FoodManager.instance.RemoveFood(FoodManager.instance.foodcount);
         mdc.moveSpeed -= slowspeed;
 
         Debug.Log("Player gets slowed down");
