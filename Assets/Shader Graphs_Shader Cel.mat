@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs_New Shader Graph
-  m_Shader: {fileID: -6465566751694194690, guid: e23e9062e1066964a89f196741548ba5, type: 3}
+  m_Name: Shader Graphs_Shader Cel
+  m_Shader: {fileID: -6465566751694194690, guid: af643c9bc62f3a745ad999998dc9b4da, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -23,7 +23,11 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _Texture:
+    - _Texture2D:
+        m_Texture: {fileID: 2800000, guid: 75738dcdef71f4e6797d26c267d75e22, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_860babe7fa614c1a8b0b9c859d6a87d2_Out_0_Texture2D:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -31,15 +35,11 @@ Material:
     m_Floats:
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
-    - _Max_Brightness: 5
-    - _Min_Brightness: 0
-    - _Shades: 0.65
     m_Colors:
-    - _Color: {r: 0.7798742, g: 0.25750554, b: 0.25750554, a: 0}
-    - _Light_Tint: {r: 0.42138356, g: 0.3909061, b: 0.3909061, a: 0}
+    - _Color: {r: 0.35220122, g: 0.23812345, b: 0.23812345, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &1934938210207290545
+--- !u!114 &1890332487672481097
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

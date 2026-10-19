@@ -6,9 +6,10 @@ using UnityEngine.SocialPlatforms.Impl;
 public class FoodManager : MonoBehaviour
 {
     public static FoodManager instance;
+    public MouseDirectionController mdc;
     public TMP_Text FoodText;
-    public Image Fillbar;
-    public float DisplayBarFillAmount;
+    public Image BoostBar;
+    public float displayFilledAmount;
     public float BarFillSpeed = 1f;
     public int foodcount;
     public int maxfood = 0;
@@ -34,6 +35,7 @@ public class FoodManager : MonoBehaviour
     {
         foodcount += amount;
         UpdateFoodUI();
+        Bar();
 
         Debug.Log("Food: " + foodcount);
     }
@@ -55,11 +57,12 @@ public class FoodManager : MonoBehaviour
     {
         float fillTarget = (maxfood > 0f) ? Mathf.Clamp01((float)foodcount/maxfood) : 0f;
 
-        DisplayBarFillAmount = Mathf.MoveTowards(DisplayBarFillAmount, fillTarget, BarFillSpeed * Time.deltaTime);
+        displayFilledAmount = Mathf.MoveTowards(displayFilledAmount, fillTarget, BarFillSpeed * Time.deltaTime);
 
-        if (Fillbar != null)
+        if (BoostBar != null)
         {
-            Fillbar.fillAmount = DisplayBarFillAmount;
+
+            BoostBar.fillAmount = displayFilledAmount;
         }
     }
 }

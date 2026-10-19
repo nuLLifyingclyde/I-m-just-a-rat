@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -22,12 +23,13 @@ public class MouseDirectionController : MonoBehaviour
 
     [Header("Shake Boost")]
     public bool enableShakeBoost = true;
+    public bool requireRightClickToBoost = true;
     public float shakeSpeedMultiplier = 1.8f;
     public bool infiniteboost = false;
     public int shakesToTrigger = 3;
     public float shakeWindow = 0.4f, minShakePixelsPerSecond = 500f, boostDuration = 2f, boostBlendSpeed = 6f;
-    
-    
+
+
     //Camera changing
     [Header("Turn Lock")]
     public bool movementLocked = false;
@@ -42,14 +44,15 @@ public class MouseDirectionController : MonoBehaviour
 
     [Header("Boost Bar")]
     public Image BoostBar;
-    private float displayFilledAmount;
-    private float barFillSpeed = 2f ;
+    public float displayFilledAmount;
+    public float barFillSpeed = 5f;
     public float maxBoostTimer = 1f;
 
     [Header("Animation")]
     public Animator ani;
     private int lastFacingDirection = 1;
 
+    [Header("Part Activator")]
     private CharacterController controller;
     private Transform cachedTransform;
     private Vector3 laneOrigin, axis;
@@ -58,90 +61,95 @@ public class MouseDirectionController : MonoBehaviour
     public float boostTimer;
     private bool hasCursorSample;
     private int shakeCount;
+    public FoodScript fos;
 
+    public string FoodTag = "Food";
     public float SpeedMultiplier { get; set; } = 1f;
     public float CurrentSpeed => currentSpeed;
     public int MoveDirection => currentSpeed > 0.01f ? 1 : currentSpeed < -0.01f ? -1 : 0;
-    public bool IsBoosting => boostTimer > 0f ;
+    public bool IsBoosting => boostTimer > 0f;
     public float ShakeBoost => Mathf.Lerp(1f, shakeSpeedMultiplier, boostBlend);
 
-    private void Awake()
+
+    private void Awake() //Codecredit: Mao
     {
-        controller = GetComponent<CharacterController>();
-        cachedTransform = transform;
-        if (targetCamera == null) targetCamera = Camera.main;
-        axis = moveAxis.sqrMagnitude > 0f ? moveAxis.normalized : Vector3.right;
-        laneOrigin = cachedTransform.position;
+        controller = GetComponent<CharacterController>(); // find CharacterController
+        cachedTransform = transform; //find transform
+        if (targetCamera == null) targetCamera = Camera.main; //if there's a camera then the target camera is the main one
+        axis = moveAxis.sqrMagnitude > 0f ? moveAxis.normalized : Vector3.right; //axis is moving axis that is in the magnitute bigger than 0
+        laneOrigin = cachedTransform.position; //form a lane which is the position
         lastShakeTime = float.NegativeInfinity; // so the first reversal always starts a fresh streak
-        boostTimer = 0f;
-        maxBoostTimer = 1f;
+        boostTimer = 0f; //Boost Timer is 0f;
+        maxBoostTimer = 1f; //The timer is 1f
+        //boostTimer code made by Krystal
     }
 
-    public void Update()
+    public void Update() 
     {
         // Native property reads, so sample them once and pass them down.
-        float dt = Time.deltaTime;
-        Vector2 cursor = Input.mousePosition;
+        float dt = Time.deltaTime; //declare deltatime
+        Vector2 cursor = Input.mousePosition; //declare mouse position as vector2 so that i can declare it to activate whatever tf i want
 
         // Without a usable projection there is no way to tell which side the cursor is on, so coast.
-        bool canReadCursor = UpdateScreenProjection();
+        bool canReadCursor = UpdateScreenProjection();//the thing that reads the cursor is set to bool (true/false) and declared as UpdateScreenProjection
         //int input = canReadCursor ? ReadMouseDirection(cursor) : 0;
 
         int input = (!movementLocked && canReadCursor) ? ReadMouseDirection(cursor) : 0; //lock character movement while turning
+        //set input as interger, make it equal to movementlock and cursor reader declared above at line 94
+        //line 89-99 is credited to Mao
 
-        //Flip the character
-
-        
         // Flip the character
         if (input != 0)
         {
-            lastFacingDirection = input;
-            Vector3 scale = transform.localScale;
-            scale.x = Mathf.Abs(scale.x) * (lastFacingDirection != 0 ? lastFacingDirection : 1);
-            transform.localScale = scale;
+            lastFacingDirection = input; //self explainatory
+            Vector3 scale = transform.localScale; //the scale is declared as Vector 3
+            scale.x = Mathf.Abs(scale.x) * (lastFacingDirection != 0 ? lastFacingDirection : 1); //the scale of x is equal to the math abstraction of scale x multiplied by the last facing direction not equal by zero and by one
+            transform.localScale = scale; //the current localscale is the main scale
+            //code credited by Nao
         }
 
         // Corrected: check if speed is greater than a tiny threshold
-        if (Mathf.Abs(currentSpeed) > 0.01f)
+
+        //Animation Code
+        if (Mathf.Abs(currentSpeed) > 0.01f) //if the current speed is bigger than 0.01, then walk
         {
             ani.SetBool("isWalking", true);
         }
         else
         {
+            ani.SetBool("isWalking", false); //uf the current speed is smaller than 0.01 then dont walk
+        }
+
+        bool isHoldingRightClick = Input.GetMouseButton(1);
+        bool isTryingToBoost = isHoldingRightClick && boostTimer > 0f;
+
+        if (isTryingToBoost)
+        {
             ani.SetBool("isWalking", false);
-        }
-
-        if (boostTimer > 0)
-        {
             ani.SetBool("isBoosting", true);
-        }
 
-        else
-        {
-            ani.SetBool("isBoosting", false);
-        }
-
-
-        if (boostTimer > 0) boostTimer -= dt;
-        boostBlend = Mathf.MoveTowards(boostBlend, IsBoosting ? 1f : 0f, boostBlendSpeed * dt);
-
-        if (boostTimer > 0f && Input.GetMouseButtonDown(1))
-        {
             boostTimer -= dt;
-            if (boostTimer <= 0f)
+
+            if (boostTimer <= 0)
             {
                 boostTimer = 0f;
-                maxBoostTimer = 1f;
+                boostDuration = 1f;
+                accumulatedFoodDuration = 0f;
+                accumulatedFoodMultiplier = 0f;
                 Debug.Log("Boost Out");
             }
+        }
+        else
+        {
 
-           
-            
+            ani.SetBool("isBoosting", false);
+
+
         }
 
-        /*// Two rates, so coasting to a stop feels different from driving into a direction.
-        currentSpeed = Mathf.MoveTowards(currentSpeed, input * moveSpeed * SpeedMultiplier * ShakeBoost,
-        (input == 0 ? deceleration : acceleration) * dt);*/
+
+            float targetMultiplier = isTryingToBoost ? (1f + accumulatedFoodMultiplier) : 1f;
+        SpeedMultiplier = targetMultiplier;
 
         float targetSpeed = movementLocked ? 0f : input * moveSpeed * SpeedMultiplier * ShakeBoost;
         currentSpeed = Mathf.MoveTowards(currentSpeed, targetSpeed, (input == 0 ? deceleration : acceleration) * dt);
@@ -163,6 +171,7 @@ public class MouseDirectionController : MonoBehaviour
             else
 
                 foodDecayTimer -= dt;
+
             if (foodDecayTimer <= 0f)
             {
 
@@ -173,32 +182,48 @@ public class MouseDirectionController : MonoBehaviour
                 Debug.Log("Boost is gone");
             }
         }
-        
-       
+
+
         float fillTarget = maxBoostTimer > 0f ? Mathf.Clamp01(boostTimer / maxBoostTimer) : 0f;
         displayFilledAmount = Mathf.MoveTowards(displayFilledAmount, fillTarget, barFillSpeed * dt);
 
+
+
         if (BoostBar != null)
         {
-           
-                BoostBar.fillAmount = displayFilledAmount;
+
+            BoostBar.fillAmount = displayFilledAmount;
         }
 
-      
+
     }
 
-  
+    public void OnTriggerEnter(Collider collision)
+    {
+        if (collision.CompareTag(FoodTag))
+        {
+            float fillTarget = (fos.foodAmount > 0f) ? Mathf.Clamp01((float)fos.foodAmount) : 0f;
+
+            displayFilledAmount = Mathf.MoveTowards(displayFilledAmount, fillTarget, barFillSpeed * Time.deltaTime);
+            if (BoostBar != null)
+            {
+
+                BoostBar.fillAmount = displayFilledAmount;
+            }
+        }
+    }
+
 
     //Camera changing
     public void SetMoveAxis(Vector3 newAxis)
     {
         if (newAxis.sqrMagnitude < 0.0001f) return;
-        
+
         axis = newAxis.normalized;
         moveAxis = axis;
-        
+
         laneOrigin = cachedTransform.position;
-        
+
         hasCursorSample = false;
         lastStrokeSign = 0f;
         shakeCount = 0;
@@ -236,73 +261,29 @@ public class MouseDirectionController : MonoBehaviour
         return distance > deadZonePixels ? 1 : distance < -deadZonePixels ? -1 : 0;
     }
 
-   public void AddFoodBoost(float addDuration, float addMultiplier)
+
+    public void AddFoodBoost(float addDuration, float addMultiplier)
     {
+
         accumulatedFoodDuration += addDuration;
         accumulatedFoodMultiplier += addMultiplier;
 
-        SpeedMultiplier += addMultiplier;
-        if (boostTimer <= 0)
-        {
-            boostTimer = addDuration;
-        }
-        else
 
-        {
-            boostTimer += addDuration;
-        }
-       
+        float maxFoodCompacity = 5f;
 
-        maxBoostTimer = Mathf.Max(boostTimer, maxBoostTimer);
+
+        boostTimer = Mathf.Min (boostTimer + addDuration, maxFoodCompacity);
+        maxBoostTimer = maxFoodCompacity;
         foodDecayTimer = foodDecayDelay;
+
+
     }
+
+
 
     // Waggling the cursor along the move axis, on the side the character already heads towards,
     // charges up a short speed boost.
- void UpdateShakeBoost(int input, Vector2 cursor, bool canReadCursor, float dt)
-    {
-        // Ticked unconditionally so an in-flight boost still fades out if input or the feature drops.
-        if (boostTimer > 0f) boostTimer -= dt;
-        boostBlend = Mathf.MoveTowards(boostBlend, IsBoosting ? 1f : 0f, boostBlendSpeed * dt);
 
-        // The cursor has to lead the movement; either side counts while still spinning up or turning.
-        bool tracking = enableShakeBoost && canReadCursor && dt > 0f
-            && input != 0 && (MoveDirection == 0 || input == MoveDirection);
-        if (!tracking)
-        {
-            hasCursorSample = false;
-            lastStrokeSign = 0f;
-            shakeCount = 0;
-            return;
-        }
-
-        // Raw cursor, not its offset from the character, so a fast character overtaking a still
-        // cursor cannot fake a reversal.
-        float cursorAxisPosition = Vector2.Dot(cursor, screenAxisDirection);
-        float delta = cursorAxisPosition - lastCursorAxisPosition;
-        bool hadSample = hasCursorSample;
-        lastCursorAxisPosition = cursorAxisPosition;
-        hasCursorSample = true;
-
-        // Ignore drift and jitter. Scaling by dt is |delta| / dt < threshold without the divide.
-        if (!hadSample || Mathf.Abs(delta) < minShakePixelsPerSecond * dt) return;
-
-        // A shake is a change of stroke direction, not a stroke: left-right-left is two shakes.
-        float strokeSign = delta > 0f ? 1f : -1f;
-        if (lastStrokeSign != 0f && strokeSign != lastStrokeSign)
-        {
-            if (Time.time - lastShakeTime > shakeWindow) shakeCount = 0; // too slow, start a new streak
-            lastShakeTime = Time.time;
-            if (++shakeCount >= shakesToTrigger)
-            {
-                shakeCount = 0; // consume the streak so it retriggers every Nth reversal, not every one
-                boostTimer = boostDuration;
-            }
-        }
-        lastStrokeSign = strokeSign;
-        
-    }
- 
 
     // 3D collisions can nudge the character off the sidescroller plane, so strip any movement that
     // is not along the move axis or straight up.
@@ -314,7 +295,7 @@ public class MouseDirectionController : MonoBehaviour
         // Writing position resyncs the controller with the physics scene, so only when it drifted.
         if (drift.sqrMagnitude > 1e-6f) cachedTransform.position = position - drift;
     }
-   
+
 
     // Editor-only: keeps the inspector from producing values that break the math.
     private void OnValidate()
@@ -322,7 +303,7 @@ public class MouseDirectionController : MonoBehaviour
         axis = moveAxis.sqrMagnitude > 0f ? moveAxis.normalized : Vector3.right;
         deadZonePixels = Mathf.Max(0f, deadZonePixels);
         shakeSpeedMultiplier = Mathf.Max(1f, shakeSpeedMultiplier);
-      
+
         shakeWindow = Mathf.Max(0.01f, shakeWindow);
         minShakePixelsPerSecond = Mathf.Max(0f, minShakePixelsPerSecond);
         boostDuration = Mathf.Max(0f, boostDuration);

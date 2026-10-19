@@ -29,7 +29,7 @@ public class RatFood : MonoBehaviour
     }
     void Update() //I changed food count to food manager
     {
-        if (fm.foodcount >= 40) //20+ = fat
+        if (fm.foodcount >= 20) //20+ = fat
         {
             mdc.acceleration += firstaccel;
             mdc.moveSpeed += firstboost;

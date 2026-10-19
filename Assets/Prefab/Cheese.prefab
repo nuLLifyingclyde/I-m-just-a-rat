@@ -232,8 +232,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7d39e35af2e32e4897d8c7d8a6baf40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fm: {fileID: 0}
   foodAmount: 1
   gameObject: {fileID: 7207367929955653405}
   mdc: {fileID: 5211442685326763108, guid: 1e1407d52825b4456b0a57fa18d98710, type: 3}
-  multiplierboost: 0.03
+  multiplierboost: 0.02
   durationBoost: 1
