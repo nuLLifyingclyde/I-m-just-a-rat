@@ -14,6 +14,8 @@ public class FoodManager : MonoBehaviour
     public int foodcount;
     public int maxfood = 0;
     public int minfood = 50;
+    public int completefood = 50;
+    public Image CheeseBar; 
 
     private void Awake()
     {
@@ -44,7 +46,7 @@ public class FoodManager : MonoBehaviour
     {
         foodcount = Mathf.Max(0, foodcount - amount);
         UpdateFoodUI();
-        
+
         Debug.Log("Food: " + foodcount);
     }
 
@@ -55,7 +57,7 @@ public class FoodManager : MonoBehaviour
 
     public void Bar()
     {
-        float fillTarget = (maxfood > 0f) ? Mathf.Clamp01((float)foodcount/maxfood) : 0f;
+        float fillTarget = (maxfood > 0f) ? Mathf.Clamp01((float)foodcount / maxfood) : 0f;
 
         displayFilledAmount = Mathf.MoveTowards(displayFilledAmount, fillTarget, BarFillSpeed * Time.deltaTime);
 
@@ -65,4 +67,6 @@ public class FoodManager : MonoBehaviour
             BoostBar.fillAmount = displayFilledAmount;
         }
     }
+
+   
 }

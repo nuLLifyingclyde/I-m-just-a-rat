@@ -3,40 +3,64 @@
   "WorkspaceRootPath": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|c:\\users\\tweak\\my project (7)\\i\u0027m just a rat\\assets\\script\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|c:\\users\\tweak\\my project (7)\\i\u0027m just a rat\\assets\\scenes\\creditmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|solutionrelative:assets\\scenes\\creditmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\Toon Shader.shader||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Toon Shader.shader||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|c:\\users\\tweak\\my project (7)\\i\u0027m just a rat\\assets\\script\\close.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\close.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|c:\\users\\tweak\\my project (7)\\i\u0027m just a rat\\assets\\3d \u0026 2d assets\\audiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|solutionrelative:assets\\3d \u0026 2d assets\\audiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\assets\\script\\foodscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\foodscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\assets\\script\\foodmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\foodmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\assets\\script\\ratfood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\ratfood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\assets\\3d \u0026 2d assets\\_level\\texture\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|solutionrelative:assets\\3d \u0026 2d assets\\_level\\texture\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\DoorOpen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\DoorOpen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\assets\\script\\cornerturn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\cornerturn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\assets\\script\\foodscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\foodscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\assets\\script\\damagetaken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\damagetaken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\assets\\scenes\\gohome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|solutionrelative:assets\\scenes\\gohome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\assets\\script\\trash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\trash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\assets\\3d \u0026 2d assets\\audiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|solutionrelative:assets\\3d \u0026 2d assets\\audiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\assets\\script\\ratfood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\ratfood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\Toon Shader.shader||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Toon Shader.shader||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\assets\\script\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\assets\\script\\gameender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\gameender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\assets\\script\\cornerturn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\cornerturn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\assets\\script\\foodmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\foodmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\assets\\script\\caractualmovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -75,10 +99,6 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\DamageTaken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\assets\\script\\trash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{97FA311A-5D30-3C8A-AB02-AFF082170475}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\trash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\Climb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Climb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -90,11 +110,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 24,
               "Title": "Climb.cs",
               "DocumentMoniker": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\Climb.cs",
               "RelativeDocumentMoniker": "Assets\\Climb.cs",
@@ -107,20 +127,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 7,
               "Title": "trash.cs",
               "DocumentMoniker": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\Script\\trash.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\trash.cs",
               "ToolTip": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\Script\\trash.cs",
               "RelativeToolTip": "Assets\\Script\\trash.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-30T12:50:36.745Z",
               "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "DoorOpen.cs",
               "DocumentMoniker": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\DoorOpen.cs",
               "RelativeDocumentMoniker": "Assets\\DoorOpen.cs",
@@ -132,7 +152,69 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CreditMenu.cs",
+              "DocumentMoniker": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\Scenes\\CreditMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\Scenes\\CreditMenu.cs",
+              "ToolTip": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\Scenes\\CreditMenu.cs",
+              "RelativeToolTip": "Assets\\Scenes\\CreditMenu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T12:37:02.843Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Close.cs",
+              "DocumentMoniker": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\Script\\Close.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Close.cs",
+              "ToolTip": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\Script\\Close.cs",
+              "RelativeToolTip": "Assets\\Script\\Close.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T12:05:57.11Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GoHome.cs",
+              "DocumentMoniker": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\Scenes\\GoHome.cs",
+              "RelativeDocumentMoniker": "Assets\\Scenes\\GoHome.cs",
+              "ToolTip": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\Scenes\\GoHome.cs",
+              "RelativeToolTip": "Assets\\Scenes\\GoHome.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T10:09:42.517Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "MainMenu.cs",
+              "DocumentMoniker": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\3D \u0026 2D Assets\\_Level\\Texture\\MainMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\3D \u0026 2D Assets\\_Level\\Texture\\MainMenu.cs",
+              "ToolTip": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\3D \u0026 2D Assets\\_Level\\Texture\\MainMenu.cs",
+              "RelativeToolTip": "Assets\\3D \u0026 2D Assets\\_Level\\Texture\\MainMenu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T10:08:15.939Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DamageTaken.cs",
+              "DocumentMoniker": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\Script\\DamageTaken.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\DamageTaken.cs",
+              "ToolTip": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\Script\\DamageTaken.cs",
+              "RelativeToolTip": "Assets\\Script\\DamageTaken.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T09:46:26.25Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "AudioManager.cs",
               "DocumentMoniker": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\3D \u0026 2D Assets\\AudioManager.cs",
               "RelativeDocumentMoniker": "Assets\\3D \u0026 2D Assets\\AudioManager.cs",
@@ -140,12 +222,11 @@
               "RelativeToolTip": "Assets\\3D \u0026 2D Assets\\AudioManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-20T03:10:38.132Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-20T03:10:38.132Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "RatFood.cs",
               "DocumentMoniker": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\Script\\RatFood.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\RatFood.cs",
@@ -157,7 +238,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 10,
               "Title": "Toon Shader.shader",
               "DocumentMoniker": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\Toon Shader.shader",
               "RelativeDocumentMoniker": "Assets\\Toon Shader.shader",
@@ -168,70 +249,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 11,
               "Title": "PlayerController.cs",
               "DocumentMoniker": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\Script\\PlayerController.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\PlayerController.cs",
               "ToolTip": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\Script\\PlayerController.cs",
               "RelativeToolTip": "Assets\\Script\\PlayerController.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAIAywFYAAABeAAAAAAAAAA==",
+              "ViewState": "AgIAAEcAAAAAAAAAAAD4v1YAAABeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T05:40:02.615Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-14T05:40:02.615Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "FoodScript.cs",
               "DocumentMoniker": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\Script\\FoodScript.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\FoodScript.cs",
               "ToolTip": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\Script\\FoodScript.cs",
               "RelativeToolTip": "Assets\\Script\\FoodScript.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwA0AAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-15T00:34:58.93Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-15T00:34:58.93Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 14,
               "Title": "FoodManager.cs",
               "DocumentMoniker": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\Script\\FoodManager.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\FoodManager.cs",
               "ToolTip": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\Script\\FoodManager.cs",
               "RelativeToolTip": "Assets\\Script\\FoodManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwCUAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-16T05:34:06.659Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-16T05:34:06.659Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 13,
               "Title": "CornerTurn.cs",
               "DocumentMoniker": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\Script\\CornerTurn.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\CornerTurn.cs",
               "ToolTip": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\Script\\CornerTurn.cs",
               "RelativeToolTip": "Assets\\Script\\CornerTurn.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-16T07:07:37.6Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "GameEnder.cs",
               "DocumentMoniker": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\Script\\GameEnder.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\GameEnder.cs",
               "ToolTip": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\Script\\GameEnder.cs",
               "RelativeToolTip": "Assets\\Script\\GameEnder.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwBEAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-16T06:50:14.357Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 15,
               "Title": "CarACTUALMovement.cs",
               "DocumentMoniker": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\Script\\CarACTUALMovement.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\CarACTUALMovement.cs",
@@ -243,7 +321,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 16,
               "Title": "PlayerJump.cs",
               "DocumentMoniker": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\Script\\PlayerJump.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\PlayerJump.cs",
@@ -255,7 +333,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 17,
               "Title": "Tonn Shader NEO.shader",
               "DocumentMoniker": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\Tonn Shader NEO.shader",
               "RelativeDocumentMoniker": "Assets\\Tonn Shader NEO.shader",
@@ -266,7 +344,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 18,
               "Title": "Compiled-Shader Graphs-New Shader Graph.shader",
               "DocumentMoniker": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Temp\\Compiled-Shader Graphs-New Shader Graph.shader",
               "RelativeDocumentMoniker": "Temp\\Compiled-Shader Graphs-New Shader Graph.shader",
@@ -277,7 +355,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 21,
               "Title": "TrashTrigger.cs",
               "DocumentMoniker": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\TrashTrigger.cs",
               "RelativeDocumentMoniker": "Assets\\TrashTrigger.cs",
@@ -288,7 +366,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 20,
               "Title": "DoorTrigger.cs",
               "DocumentMoniker": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\DoorTrigger.cs",
               "RelativeDocumentMoniker": "Assets\\DoorTrigger.cs",
@@ -299,7 +377,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 19,
               "Title": "ClimbActivator.cs",
               "DocumentMoniker": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\Script\\ClimbActivator.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\ClimbActivator.cs",
@@ -310,7 +388,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 22,
               "Title": "Climb.cs",
               "DocumentMoniker": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\Script\\Climb.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Climb.cs",
@@ -322,7 +400,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 23,
               "Title": "DamageTaken.cs",
               "DocumentMoniker": "C:\\Users\\tweak\\My project (7)\\I\u0027m just a rat\\Assets\\DamageTaken.cs",
               "RelativeDocumentMoniker": "Assets\\DamageTaken.cs",

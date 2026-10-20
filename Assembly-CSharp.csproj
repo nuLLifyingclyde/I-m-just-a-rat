@@ -64,10 +64,12 @@
     <Compile Include="Assets\Script\RatFood.cs" />
     <Compile Include="Assets\Script\Car Summon Script.cs" />
     <Compile Include="Assets\Script\BGM.cs" />
+    <Compile Include="Assets\Script\Close.cs" />
     <Compile Include="Assets\Script\Shit Mechanic.cs" />
     <Compile Include="Assets\Script\FoodScript.cs" />
     <Compile Include="Assets\Script\MobRoamChase.cs" />
     <Compile Include="Assets\Script\GameEnder.cs" />
+    <Compile Include="Assets\Scenes\CreditMenu.cs" />
     <Compile Include="Assets\Script\CarPool.cs" />
     <Compile Include="Assets\Script\Corner.cs" />
     <Compile Include="Assets\Script\NewMovementScript.cs" />
@@ -80,6 +82,7 @@
     <Compile Include="Assets\Script\trash.cs" />
     <Compile Include="Assets\Script\CarACTUALMovement.cs" />
     <Compile Include="Assets\Script\NewMouseMovement.cs" />
+    <Compile Include="Assets\Scenes\GoHome.cs" />
     <Compile Include="Assets\Script\DoorOpen.cs" />
     <Compile Include="Assets\Script\TrashTrigger.cs" />
     <Compile Include="Assets\Script\EntityScript.cs" />
@@ -89,6 +92,7 @@
     <Compile Include="Assets\3D &amp; 2D Assets\_Level\Texture\MainMenu.cs" />
     <Compile Include="Assets\Script\FoodManager.cs" />
     <Compile Include="Assets\Script\DoorTrigger.cs" />
+    <Compile Include="Assets\Scenes\Pause Menu.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

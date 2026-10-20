@@ -12,16 +12,16 @@ public class GameEnder : MonoBehaviour
             return;
         }
 
-        if (fm.foodcount < 50)
+        if (fm.foodcount < 40)
         {
             Debug.Log("Player is Dead");
-            SceneManager.LoadScene("Trash alleyway");
+            SceneManager.LoadScene("You Lose");
         }
 
         else
         {
-            Debug.Log("Game complete!");
-            Application.Quit();
+            Debug.Log("Player eat enough food");
+            SceneManager.LoadScene("You Win");
         }
     }
 }

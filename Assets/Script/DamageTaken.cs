@@ -24,7 +24,7 @@ public class DamageTaken : MonoBehaviour
         if (other.CompareTag(CarTag))
         {
 
-            SceneManager.LoadScene("Trash alleyway");
+            SceneManager.LoadScene("You Lose");
 
 
             Debug.Log("Player is Dead");
