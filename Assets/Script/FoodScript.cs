@@ -11,15 +11,11 @@ public class FoodScript : MonoBehaviour
     public MouseDirectionController mdc;
     public float multiplierboost = 1f;
     public float durationBoost = 1f;
-    
-
 
     public void OnTriggerEnter(Collider collision)
     {
-       
-        CharacterController charController = collision.GetComponent<CharacterController>();
 
-      
+        CharacterController charController = collision.GetComponent<CharacterController>();
 
         //Declare charactercontroller as something and find collision as character controller
         if (charController != null)
@@ -31,9 +27,6 @@ public class FoodScript : MonoBehaviour
             if (mdc != null)
             {
                 //if there is the movement code
-
-
-
 
                mdc.AddFoodBoost(durationBoost, multiplierboost);
                 float fillTarget = (foodAmount > 0f) ? Mathf.Clamp01((float)foodAmount) : 0f;
@@ -47,19 +40,12 @@ public class FoodScript : MonoBehaviour
                 //and add the boost from the AddFoodBoost code that has the duration and multiplier boost
             }
 
-           
-
-
-
-
 
             FoodManager fm = FindFirstObjectByType<FoodManager>();
 
             if (fm != null)
             {
-                fm.AddFood(foodAmount);
-
-              
+                fm.AddFood(foodAmount);    
             }
 
             Destroy(gameObject);

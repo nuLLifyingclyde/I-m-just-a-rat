@@ -5,29 +5,43 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject PauseScreen;
     public GameObject TutorialScreen;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     public void PauseStart()
     {
         PauseScreen.SetActive(true);
+        TutorialScreen.SetActive(false);
         Time.timeScale = 0;
+        AudioListener.pause = true;
     }
 
-   public void HowToPlay()
+    public void HowToPlay()
     {
         TutorialScreen.SetActive(true);
+        PauseScreen.SetActive(false);
         Time.timeScale = 0;
+        AudioListener.pause = true;
     }
 
     public void HowToPlayQuit()
     {
         TutorialScreen.SetActive(false);
+        PauseScreen.SetActive(true);
+        if (PauseScreen.activeSelf) return;
         Time.timeScale = 1;
+        AudioListener.pause = false;
     }
 
-    // Update is called once per frame
     public void Resume()
     {
         PauseScreen.SetActive(false);
         Time.timeScale = 1;
+        AudioListener.pause = false;
+    }
+
+    public void BackToMenu(string menu)
+    {
+        Time.timeScale = 1;
+        AudioListener.pause = false;
+        SceneManager.LoadScene(menu);
     }
 }

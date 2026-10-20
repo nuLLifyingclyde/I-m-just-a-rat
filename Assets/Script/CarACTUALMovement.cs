@@ -14,14 +14,31 @@ public class CarACTUALMovement : MonoBehaviour
     private Coroutine deactivateCoroutine;
     public MouseDirectionController mdc;
 
+    public AudioManager audioManager;
+    public AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
     }
 
+    void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+
+        if (audioManager == null)
+            audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     private void OnEnable()
     {
         deactivateCoroutine = StartCoroutine(DeactivateCar());
+
+        if (audioSource != null)
+        {
+            audioSource.time = Random.Range(0f, audioSource.clip.length); 
+            audioSource.Play();
+        }
     }
 
     private void OnDisable()
@@ -29,6 +46,11 @@ public class CarACTUALMovement : MonoBehaviour
         if (deactivateCoroutine != null)
         {
             StopCoroutine(deactivateCoroutine);
+        }
+
+        if (audioSource != null)
+        {
+            audioSource.Stop();
         }
     }
 
@@ -54,6 +76,8 @@ public class CarACTUALMovement : MonoBehaviour
         {
             return;
         }
+
+        audioManager.PlaySFX(audioManager.BumpSFX, 0.4f);
 
         FoodManager.instance.RemoveFood(FoodManager.instance.foodcount - 10);
         mdc.moveSpeed -= slowspeed;

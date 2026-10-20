@@ -4,6 +4,8 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class Ragdoll : MonoBehaviour
 {
+    public AudioManager audioManager;
+
     private enum State { Normal, Launched, Recovering }
 
     [Min(0f)] public float launchForce = 12f, launchLift = 8f, carSpeedInfluence = 0.5f;
@@ -183,6 +185,8 @@ public class Ragdoll : MonoBehaviour
         body.linearVelocity = velocityBeforeContact =
             AlongLane(Vector3.Reflect(velocityBeforeContact, collision.GetContact(0).normal) * bounciness);
         tumbleSpeed *= bounciness;
+
+        audioManager.PlaySFX(audioManager.BumpSFX, 0.4f);
     }
 
     private IEnumerator Recover()

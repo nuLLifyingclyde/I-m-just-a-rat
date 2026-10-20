@@ -91,6 +91,8 @@ public class MouseDirectionController : MonoBehaviour
 
     public void Update() 
     {
+        if (Time.timeScale == 0f) return; //stop character movement in pause menu
+
         // Native property reads, so sample them once and pass them down.
         float dt = Time.deltaTime; //declare deltatime
         Vector2 cursor = Input.mousePosition; //declare mouse position as vector2 so that i can declare it to activate whatever tf i want
@@ -115,35 +117,24 @@ public class MouseDirectionController : MonoBehaviour
 
         // Corrected: check if speed is greater than a tiny threshold
 
-        //Animation Code
-        if (Mathf.Abs(currentSpeed) > 0.01f) //if the current speed is bigger than 0.01, then walk
-        {
-            
-            ani.SetBool("isWalking", true);
-            audioManager.PlaySFX(audioManager.WalkSFX);
 
-        }
-        else
-        {
-            ani.SetBool("isWalking", false); //uf the current speed is smaller than 0.01 then dont walk
-           
-        }
-
+        //animation and audio
         bool isHoldingRightClick = Input.GetMouseButton(1);
         bool isTryingToBoost = isHoldingRightClick && boostTimer > 0f;
 
+        //normal walking animation
+        bool isMoving = Mathf.Abs(currentSpeed) > 0.01f;
+        ani.SetBool("isWalking", isMoving && !isTryingToBoost);
+
+        //running animation
+        ani.SetBool("isBoosting", isTryingToBoost);
+
+        //boost timer
         if (isTryingToBoost)
         {
-            
-            Debug.Log("Rat Running Sound on");
-            ani.SetBool("isWalking", false);
-            ani.SetBool("isBoosting", true);
-            audioManager.PlaySFX(audioManager.RunningSFX);
-
-
             boostTimer -= dt;
 
-            if (boostTimer <= 0)
+            if (boostTimer <= 0f)
             {
                 boostTimer = 0f;
                 boostDuration = 1f;
@@ -152,16 +143,28 @@ public class MouseDirectionController : MonoBehaviour
                 Debug.Log("Boost Out");
             }
         }
+        AnimatorStateInfo state = ani.GetCurrentAnimatorStateInfo(0);
+
+        bool isWalkingAnimation = state.IsName("Rat Walking");
+        bool isRunningAnimation = state.IsName("Rat Boosting");
+
+        //choose audio based on the current animation
+        if (isRunningAnimation)
+        {
+            audioManager.PlayMovement(audioManager.RunningSFX);
+        }
+        else if (isWalkingAnimation)
+        {
+            audioManager.PlayMovement(audioManager.WalkSFX);
+        }
         else
         {
-
-            ani.SetBool("isBoosting", false);
-
-
+            audioManager.StopMovement();
         }
 
 
-            float targetMultiplier = isTryingToBoost ? (1f + accumulatedFoodMultiplier) : 1f;
+
+        float targetMultiplier = isTryingToBoost ? (1f + accumulatedFoodMultiplier) : 1f;
         SpeedMultiplier = targetMultiplier;
 
         float targetSpeed = movementLocked ? 0f : input * moveSpeed * SpeedMultiplier * ShakeBoost;
@@ -215,6 +218,8 @@ public class MouseDirectionController : MonoBehaviour
     {
         if (collision.CompareTag(FoodTag))
         {
+            audioManager.PlaySFX(audioManager.EatCheeseSFX, 0.8f);
+
             float fillTarget = (fos.foodAmount > 0f) ? Mathf.Clamp01((float)fos.foodAmount) : 0f;
 
             displayFilledAmount = Mathf.MoveTowards(displayFilledAmount, fillTarget, barFillSpeed * Time.deltaTime);
@@ -288,8 +293,6 @@ public class MouseDirectionController : MonoBehaviour
         boostTimer = Mathf.Min (boostTimer + addDuration, maxFoodCompacity);
         maxBoostTimer = maxFoodCompacity;
         foodDecayTimer = foodDecayDelay;
-
-
     }
 
 
