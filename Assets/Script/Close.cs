@@ -9,5 +9,6 @@ public class Close : MonoBehaviour
     public void Quit()
     {
         Application.Quit();
+        Debug.Log("Byebeye");
     }
 }

@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3619070049693892700
 RectTransform:
   m_ObjectHideFlags: 0
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 6982b7f1b5552454abf8d8cb36ed2c37, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -91,7 +91,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5524538732982412323
 RectTransform:
   m_ObjectHideFlags: 0
@@ -316,7 +316,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: b3291a8d850ad5043bad0a49059b549b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -338,6 +338,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb2026f6a6bb34a4b813dde1275a0a5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  button: {fileID: 7271046523523623085}
+  foodCollectedUI: {fileID: 3611844884416565799}
+  boostBar: {fileID: 152496359661761322}
+  foodBar: {fileID: 1722642379605588272}
+  foodDecleration: {fileID: 5733636707253349990}
 --- !u!1 &1722642379605588272
 GameObject:
   m_ObjectHideFlags: 0
@@ -353,7 +358,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1838772428956674785
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1131,7 +1136,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4749366104872791116
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1340,7 +1345,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3541253468063389046
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1350,16 +1355,16 @@ RectTransform:
   m_GameObject: {fileID: 7271046523523623085}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7214315, y: 4.232656, z: 4.232656}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 792144185913528307}
   m_Father: {fileID: 5854600991963218536}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -880, y: 445}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -855, y: 440}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1452141977162754758
 CanvasRenderer:
@@ -1389,7 +1394,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bc2a34945a58e144491bf622ff885506, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7d1266ea902a8384f98be5bda1907384, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1713,6 +1718,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Food collected UI
       objectReference: {fileID: 0}
+    - target: {fileID: 2141768933571155035, guid: 54176c47140ce34448685734ced7343d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5051760570568996106, guid: 54176c47140ce34448685734ced7343d, type: 3}
       propertyPath: m_text
       value: 20
@@ -1750,6 +1759,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54176c47140ce34448685734ced7343d, type: 3}
+--- !u!1 &3611844884416565799 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2141768933571155035, guid: 54176c47140ce34448685734ced7343d, type: 3}
+  m_PrefabInstance: {fileID: 3433659048792147580}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &4156031396700843684 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1588642841334556888, guid: 54176c47140ce34448685734ced7343d, type: 3}
