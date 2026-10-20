@@ -75,6 +75,7 @@
     <Compile Include="Assets\Script\ShakeMovementSystem.cs" />
     <Compile Include="Assets\Script\DamageTaken.cs" />
     <Compile Include="Assets\Script\CornerTurn.cs" />
+    <Compile Include="Assets\3D &amp; 2D Assets\AudioManager.cs" />
     <Compile Include="Assets\Script\PlayerJump.cs" />
     <Compile Include="Assets\Script\trash.cs" />
     <Compile Include="Assets\Script\CarACTUALMovement.cs" />

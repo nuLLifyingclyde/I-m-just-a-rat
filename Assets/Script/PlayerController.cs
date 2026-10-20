@@ -70,9 +70,12 @@ public class MouseDirectionController : MonoBehaviour
     public bool IsBoosting => boostTimer > 0f;
     public float ShakeBoost => Mathf.Lerp(1f, shakeSpeedMultiplier, boostBlend);
 
+   public  AudioManager audioManager;
+
 
     private void Awake() //Codecredit: Mao
     {
+        
         controller = GetComponent<CharacterController>(); // find CharacterController
         cachedTransform = transform; //find transform
         if (targetCamera == null) targetCamera = Camera.main; //if there's a camera then the target camera is the main one
@@ -81,6 +84,8 @@ public class MouseDirectionController : MonoBehaviour
         lastShakeTime = float.NegativeInfinity; // so the first reversal always starts a fresh streak
         boostTimer = 0f; //Boost Timer is 0f;
         maxBoostTimer = 1f; //The timer is 1f
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+
         //boostTimer code made by Krystal
     }
 
@@ -113,11 +118,15 @@ public class MouseDirectionController : MonoBehaviour
         //Animation Code
         if (Mathf.Abs(currentSpeed) > 0.01f) //if the current speed is bigger than 0.01, then walk
         {
+            
             ani.SetBool("isWalking", true);
+            audioManager.PlaySFX(audioManager.WalkSFX);
+
         }
         else
         {
             ani.SetBool("isWalking", false); //uf the current speed is smaller than 0.01 then dont walk
+           
         }
 
         bool isHoldingRightClick = Input.GetMouseButton(1);
@@ -125,8 +134,12 @@ public class MouseDirectionController : MonoBehaviour
 
         if (isTryingToBoost)
         {
+            
+            Debug.Log("Rat Running Sound on");
             ani.SetBool("isWalking", false);
             ani.SetBool("isBoosting", true);
+            audioManager.PlaySFX(audioManager.RunningSFX);
+
 
             boostTimer -= dt;
 

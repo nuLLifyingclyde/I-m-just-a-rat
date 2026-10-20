@@ -12,6 +12,8 @@ TagManager:
   - trashbag
   - Shit Triggerer
   - MobNoGo
+  - AudioManager
+  - Audio
   layers:
   - Default
   - TransparentFX
