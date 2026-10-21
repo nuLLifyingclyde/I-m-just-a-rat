@@ -29,8 +29,6 @@ public class MouseDirectionController : MonoBehaviour
     public int shakesToTrigger = 3;
     public float shakeWindow = 0.4f, minShakePixelsPerSecond = 500f, boostDuration = 2f, boostBlendSpeed = 6f;
 
-    public bool boostDepleted = false;
-
 
     //Camera changing
     [Header("Turn Lock")]
@@ -72,12 +70,12 @@ public class MouseDirectionController : MonoBehaviour
     public bool IsBoosting => boostTimer > 0f;
     public float ShakeBoost => Mathf.Lerp(1f, shakeSpeedMultiplier, boostBlend);
 
-   public  AudioManager audioManager;
+    public AudioManager audioManager;
 
 
     private void Awake() //Codecredit: Mao
     {
-        
+
         controller = GetComponent<CharacterController>(); // find CharacterController
         cachedTransform = transform; //find transform
         if (targetCamera == null) targetCamera = Camera.main; //if there's a camera then the target camera is the main one
@@ -91,7 +89,7 @@ public class MouseDirectionController : MonoBehaviour
         //boostTimer code made by Krystal
     }
 
-    public void Update() 
+    public void Update()
     {
         if (Time.timeScale == 0f) return; //stop character movement in pause menu
 
@@ -122,7 +120,7 @@ public class MouseDirectionController : MonoBehaviour
 
         //animation and audio
         bool isHoldingRightClick = Input.GetMouseButton(1);
-        bool isTryingToBoost = isHoldingRightClick && boostTimer > 0f && !boostDepleted;
+        bool isTryingToBoost = isHoldingRightClick && boostTimer > 0f;
 
         //normal walking animation
         bool isMoving = Mathf.Abs(currentSpeed) > 0.01f;
@@ -142,11 +140,9 @@ public class MouseDirectionController : MonoBehaviour
                 boostDuration = 1f;
                 accumulatedFoodDuration = 0f;
                 accumulatedFoodMultiplier = 0f;
-                boostDepleted = true;
                 Debug.Log("Boost Out");
             }
         }
-
         AnimatorStateInfo state = ani.GetCurrentAnimatorStateInfo(0);
 
         bool isWalkingAnimation = state.IsName("Rat Walking");
@@ -212,8 +208,10 @@ public class MouseDirectionController : MonoBehaviour
 
         if (BoostBar != null)
         {
+
             BoostBar.fillAmount = displayFilledAmount;
         }
+
 
     }
 
@@ -285,7 +283,6 @@ public class MouseDirectionController : MonoBehaviour
 
     public void AddFoodBoost(float addDuration, float addMultiplier)
     {
-        if (boostDepleted) return;
 
         accumulatedFoodDuration += addDuration;
         accumulatedFoodMultiplier += addMultiplier;
@@ -294,7 +291,7 @@ public class MouseDirectionController : MonoBehaviour
         float maxFoodCompacity = 5f;
 
 
-        boostTimer = Mathf.Min (boostTimer + addDuration, maxFoodCompacity);
+        boostTimer = Mathf.Min(boostTimer + addDuration, maxFoodCompacity);
         maxBoostTimer = maxFoodCompacity;
         foodDecayTimer = foodDecayDelay;
     }
