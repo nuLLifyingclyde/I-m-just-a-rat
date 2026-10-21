@@ -744,7 +744,13 @@ PlayerSettings:
   XboxOneOverrideIdentityPublisher: 
   vrEditorSettings: {}
   cloudServicesEnabled:
+    Build: 0
+    Game Performance: 0
+    Legacy Analytics: 0
+    Purchasing: 0
+    UDP: 0
     UNet: 1
+    Unity Ads: 0
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -766,11 +772,11 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: e688694d-db6e-4bdc-812b-0cb96cf4582c
+  cloudProjectId: 28d6832b-9c24-42f6-a81c-a0d6f2b35305
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: My project (7)
-  organizationId: clone120052003
+  projectName: I Am Just A Rat
+  organizationId: blackgames935
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}

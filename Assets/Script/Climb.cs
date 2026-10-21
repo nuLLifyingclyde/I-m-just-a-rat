@@ -41,9 +41,9 @@ public class Climb : MonoBehaviour
         { 
             rb.useGravity = true; 
         } 
-    } 
-    
-    private void OnTriggerEnter (Collider collision) 
+    }
+
+    /*private void OnTriggerEnter (Collider collision) 
     { 
         if (collision.CompareTag("Ladder")) 
         { 
@@ -61,5 +61,31 @@ public class Climb : MonoBehaviour
 
             movementController.movementLocked = false;
         } 
-    } 
+    }*/
+
+    //test
+    private int ladderContacts;
+
+    private void OnTriggerEnter(Collider collision)
+    {
+        if (collision.CompareTag(LadderTag))
+        {
+            ladderContacts++;
+            isLadder = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider collision)
+    {
+        if (collision.CompareTag(LadderTag))
+        {
+            ladderContacts = Mathf.Max(0, ladderContacts - 1);
+            if (ladderContacts == 0)
+            {
+                isClimbing = false;
+                isLadder = false;
+                movementController.movementLocked = false;
+            }
+        }
+    }
 }

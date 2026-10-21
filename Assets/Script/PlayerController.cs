@@ -147,15 +147,16 @@ public class MouseDirectionController : MonoBehaviour
 
         bool isWalkingAnimation = state.IsName("Rat Walking");
         bool isRunningAnimation = state.IsName("Rat Boosting");
+        bool onGround = controller.isGrounded;
 
         //choose audio based on the current animation
-        if (isRunningAnimation)
+        if (isRunningAnimation && onGround)
         {
-            audioManager.PlayMovement(audioManager.RunningSFX);
+            audioManager.PlayMovement(audioManager.RunningSFX, 0.2f);
         }
-        else if (isWalkingAnimation)
+        else if (isWalkingAnimation && onGround)
         {
-            audioManager.PlayMovement(audioManager.WalkSFX);
+            audioManager.PlayMovement(audioManager.WalkSFX, 0.8f);
         }
         else
         {

@@ -34,8 +34,10 @@ public class AudioManager : MonoBehaviour
     }
 
     //looping movement sfx
-    public void PlayMovement(AudioClip clip)
+    public void PlayMovement(AudioClip clip, float volume = 1f)
     {
+        movementSource.volume = volume;
+
         if (movementSource.clip == clip && movementSource.isPlaying) return;
 
         movementSource.clip = clip;

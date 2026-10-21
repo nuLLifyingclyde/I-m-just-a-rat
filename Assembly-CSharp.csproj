@@ -94,6 +94,7 @@
     <Compile Include="Assets\Script\FoodManager.cs" />
     <Compile Include="Assets\Script\DoorTrigger.cs" />
     <Compile Include="Assets\Scenes\Pause Menu.cs" />
+    <Compile Include="Assets\Script\PleaseLockedIamTired.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
