@@ -83,7 +83,7 @@ public class MouseDirectionController : MonoBehaviour
         laneOrigin = cachedTransform.position; //form a lane which is the position
         lastShakeTime = float.NegativeInfinity; // so the first reversal always starts a fresh streak
         boostTimer = 0f; //Boost Timer is 0f;
-        maxBoostTimer = 1f; //The timer is 1f
+        maxBoostTimer = 5f; //The timer is 1f
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
 
         //boostTimer code made by Krystal
@@ -137,9 +137,10 @@ public class MouseDirectionController : MonoBehaviour
             if (boostTimer <= 0f)
             {
                 boostTimer = 0f;
-                boostDuration = 1f;
+               
                 accumulatedFoodDuration = 0f;
                 accumulatedFoodMultiplier = 0f;
+                SpeedMultiplier = 1f;
                 Debug.Log("Boost Out");
             }
         }
@@ -221,14 +222,7 @@ public class MouseDirectionController : MonoBehaviour
         {
             audioManager.PlaySFX(audioManager.EatCheeseSFX, 0.8f);
 
-            float fillTarget = (fos.foodAmount > 0f) ? Mathf.Clamp01((float)fos.foodAmount) : 0f;
-
-            displayFilledAmount = Mathf.MoveTowards(displayFilledAmount, fillTarget, barFillSpeed * Time.deltaTime);
-            if (BoostBar != null)
-            {
-
-                BoostBar.fillAmount = displayFilledAmount;
-            }
+            
         }
     }
 
