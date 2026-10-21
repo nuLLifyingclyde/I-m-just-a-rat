@@ -325,9 +325,4 @@ public class MouseDirectionController : MonoBehaviour
         boostDuration = Mathf.Max(0f, boostDuration);
         boostBlendSpeed = Mathf.Max(0.01f, boostBlendSpeed);
     }
-
-    void OnControllerColliderHit(ControllerColliderHit hit)
-    {
-        Debug.Log($"Hit {hit.collider.name}, normal {hit.normal}");
-    }
 }
