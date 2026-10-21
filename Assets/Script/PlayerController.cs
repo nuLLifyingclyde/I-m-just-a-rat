@@ -29,6 +29,8 @@ public class MouseDirectionController : MonoBehaviour
     public int shakesToTrigger = 3;
     public float shakeWindow = 0.4f, minShakePixelsPerSecond = 500f, boostDuration = 2f, boostBlendSpeed = 6f;
 
+    public bool boostDepleted = false;
+
 
     //Camera changing
     [Header("Turn Lock")]
@@ -120,7 +122,7 @@ public class MouseDirectionController : MonoBehaviour
 
         //animation and audio
         bool isHoldingRightClick = Input.GetMouseButton(1);
-        bool isTryingToBoost = isHoldingRightClick && boostTimer > 0f;
+        bool isTryingToBoost = isHoldingRightClick && boostTimer > 0f && !boostDepleted;
 
         //normal walking animation
         bool isMoving = Mathf.Abs(currentSpeed) > 0.01f;
@@ -140,9 +142,11 @@ public class MouseDirectionController : MonoBehaviour
                 boostDuration = 1f;
                 accumulatedFoodDuration = 0f;
                 accumulatedFoodMultiplier = 0f;
+                boostDepleted = true;
                 Debug.Log("Boost Out");
             }
         }
+
         AnimatorStateInfo state = ani.GetCurrentAnimatorStateInfo(0);
 
         bool isWalkingAnimation = state.IsName("Rat Walking");
@@ -208,10 +212,8 @@ public class MouseDirectionController : MonoBehaviour
 
         if (BoostBar != null)
         {
-
             BoostBar.fillAmount = displayFilledAmount;
         }
-
 
     }
 
@@ -283,6 +285,7 @@ public class MouseDirectionController : MonoBehaviour
 
     public void AddFoodBoost(float addDuration, float addMultiplier)
     {
+        if (boostDepleted) return;
 
         accumulatedFoodDuration += addDuration;
         accumulatedFoodMultiplier += addMultiplier;
